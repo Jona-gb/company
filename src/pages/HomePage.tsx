@@ -1,13 +1,9 @@
 import React from 'react'
 import { ArrowRight, CheckCircle2, Code2, MonitorSmartphone, MoveRight, PlayCircle, ShieldCheck, Smartphone, Users, Palette } from 'lucide-react'
 import { MainLayout } from '../layouts'
+import { imageUrls } from '../constants/images'
 
-const photos = {
-  webDevelopment: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=600&fit=crop',
-  optimization: 'https://images.unsplash.com/photo-1460925895917-aeb19be489c7?w=800&h=600&fit=crop',
-  mobileApps: 'https://images.unsplash.com/photo-1512941691920-e872e0838a17?w=800&h=600&fit=crop',
-  uiux: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=600&fit=crop',
-}
+const photos = imageUrls.services
 
 const highlightCards = [
   {
@@ -28,23 +24,43 @@ const highlightCards = [
 ]
 
 const serviceCards = [
-  { title: 'Web development', icon: Code2, image: photos.webDevelopment },
-  { title: 'Web application', icon: MonitorSmartphone, image: photos.optimization },
-  { title: 'Mobile app development', icon: Smartphone, image: photos.mobileApps },
-  { title: 'UI & UX design', icon: Users, image: photos.uiux },
+  { 
+    title: 'Web development', 
+    icon: Code2, 
+    image: photos.webDevelopment,
+    description: 'Custom-built websites and web platforms designed for performance and conversion. We combine modern frameworks with strategic UX to create experiences that engage visitors and drive results.'
+  },
+  { 
+    title: 'Web application', 
+    icon: MonitorSmartphone, 
+    image: photos.webApplication,
+    description: 'Robust, scalable web applications built with clean architecture. From complex dashboards to real-time collaboration tools, we deliver solutions that solve real business problems with elegant interfaces.'
+  },
+  { 
+    title: 'Mobile app development', 
+    icon: Smartphone, 
+    image: photos.mobileApps,
+    description: 'Native and cross-platform mobile experiences that feel intuitive and responsive. We prioritize performance, accessibility, and user delight to create apps that users actually love.'
+  },
+  { 
+    title: 'UI & UX design', 
+    icon: Users, 
+    image: photos.uiDesign,
+    description: 'Strategic design that balances aesthetics with usability. We research, prototype, and iterate to create interfaces that are both beautiful and functional, ensuring every pixel serves a purpose.'
+  },
 ]
 
-const metrics = [
-  { value: '100', label: 'Projects completed' },
-  { value: '50', label: 'Happy customers' },
-  { value: '960', label: 'Support tickets solved' },
-  { value: '95', label: 'Project deployments' },
-]
+/*const metrics = [
+  { value: '54', label: 'Projects completed' },
+  { value: '20', label: 'Happy customers' },
+  { value: '40', label: 'Project deployments' },
+  { value: '10', label: 'Project collaborations' },
+]*/
 
 const team = [
-  { name: 'Eliezer Ahorlu', role: 'Web Application Lead', image: '/assets/IMG_20260524_221102_275.jpg' },
-  { name: 'Jonathan Gbekli', role: 'Mobile Product Designer', image: '/assets/IMG-20250202-WA0012.jpg' },
-  { name: 'Marco Diaz', role: 'UX Optimization Specialist', image: 'https://images.unsplash.com/photo-1519085360771-9852dc00d837?w=400&h=400&fit=crop' },
+  { name: 'Eliezer Ahorlu', role: 'Web Application Lead', image: imageUrls.team.eliezer },
+  { name: 'Jonathan Gbekli', role: 'Mobile Product Designer', image: imageUrls.team.jonathan },
+  { name: 'Godwin Homadzi', role: 'UX Optimization Specialist', image: imageUrls.team.godwin },
 ]
 
 export const HomePage: React.FC = () => {
@@ -73,7 +89,7 @@ export const HomePage: React.FC = () => {
           <div className="overflow-hidden rounded-[24px] border border-[#d7dee7] bg-[#0f1d2d] shadow-[0_24px_70px_rgba(11,26,43,0.16)]">
             <div className="relative min-h-[520px] overflow-hidden sm:min-h-[560px]">
               <img
-                src={photos.webDevelopment}
+                src={photos.collaboration}
                 alt="Web development team collaborating in an office"
                 className="absolute inset-0 h-full w-full object-cover"
               />
@@ -102,21 +118,6 @@ export const HomePage: React.FC = () => {
                       Explore services
                       <MoveRight size={17} className="transition-transform group-hover:translate-x-1" />
                     </a>
-                  </div>
-
-                  <div className="mt-12 grid grid-cols-3 gap-4 border-t border-white/10 pt-8">
-                    <div className="group">
-                      <div className="text-3xl sm:text-4xl font-bold text-[#ff7a1a] transition-transform group-hover:scale-105">15+</div>
-                      <p className="mt-2 text-xs sm:text-sm uppercase tracking-[0.15em] text-white/60 font-medium">Projects</p>
-                    </div>
-                    <div className="group">
-                      <div className="text-3xl sm:text-4xl font-bold text-[#ff7a1a] transition-transform group-hover:scale-105">98%</div>
-                      <p className="mt-2 text-xs sm:text-sm uppercase tracking-[0.15em] text-white/60 font-medium">Client Satisfaction</p>
-                    </div>
-                    <div className="group">
-                      <div className="text-3xl sm:text-4xl font-bold text-[#ff7a1a] transition-transform group-hover:scale-105">4+</div>
-                      <p className="mt-2 text-xs sm:text-sm uppercase tracking-[0.15em] text-white/60 font-medium">Years Experience</p>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -171,7 +172,7 @@ export const HomePage: React.FC = () => {
             <div className="relative z-10 grid gap-4 sm:grid-cols-[1.1fr_0.9fr]">
               <div className="min-h-[300px] overflow-hidden rounded-[22px] bg-[linear-gradient(135deg,#102033_0%,#28405a_100%)] p-5 text-white">
                 <div className="-m-5 mb-5 h-40 overflow-hidden">
-                  <img src={photos.uiux} alt="Design team working on UI and UX ideas" className="h-full w-full object-cover opacity-80" />
+                  <img src={photos.uxDesign} alt="Design team working on UI and UX ideas" className="h-full w-full object-cover opacity-80" />
                 </div>
                 <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-white/62">Case spotlight</p>
                 <div className="mt-6 rounded-[18px] bg-white/10 p-5 backdrop-blur-sm">
@@ -227,10 +228,10 @@ export const HomePage: React.FC = () => {
               </a>
               <div className="flex items-center gap-3">
                 <div className="h-12 w-12 overflow-hidden rounded-full bg-[#101d2d]">
-                  <img src={photos.webDevelopment} alt="Project lead" className="h-full w-full object-cover" />
+                  <img src="/assets/IMG-20250202-WA0012.jpg" alt="Project lead" className="h-full w-full object-cover" />
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-[#101d2d]">Mark Johnson</p>
+                  <p className="text-sm font-semibold text-[#101d2d]">Jonathan Gbekli</p>
                   <p className="text-xs uppercase tracking-[0.18em] text-[#7f8b99]">Lead consultant</p>
                 </div>
               </div>
@@ -242,7 +243,7 @@ export const HomePage: React.FC = () => {
       <section className="bg-[#f6f8fb] py-8">
         <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
           <div className="relative overflow-hidden rounded-[28px] border border-[#d9e1ea] p-6 sm:p-8 lg:p-10">
-            <img src={photos.webDevelopment} alt="Developers collaborating on a laptop" className="absolute inset-0 h-full w-full object-cover" />
+            <img src={photos.planning} alt="Team planning a digital product roadmap" className="absolute inset-0 h-full w-full object-cover" />
             <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(16,29,45,0.7),rgba(16,29,45,0.28),rgba(255,122,26,0.22))]" />
             <div className="relative flex min-h-[260px] items-center justify-center">
               <button className="flex h-20 w-20 items-center justify-center rounded-full bg-white text-[#ff7a1a] shadow-[0_18px_40px_rgba(16,29,45,0.16)] transition hover:scale-105">
@@ -280,17 +281,17 @@ export const HomePage: React.FC = () => {
                   <div className="mt-6">
                     <h3 className="text-2xl font-semibold text-[#101d2d]">{card.title}</h3>
                     <p className="mt-3 max-w-sm text-sm leading-7 text-[#617080]">
-                      Thoughtful planning, strong execution, and visuals that help the service feel approachable from the first scroll.
+                      {card.description}
                     </p>
                   </div>
                 </div>
               </article>
             ))}
           </div>
-
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {/*
+          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 center">
             {metrics.map(metric => (
-              <article key={metric.label} className="rounded-[26px] border border-[#dde4ec] bg-[#fbfcfd] px-6 py-8 text-center">
+              <article key={metric.label} className="rounded-[26px] border border-[#dde4ec] bg-[#fbfcfd] px-6 py-8 text-center center">
                 <div className="mx-auto flex h-28 w-28 items-center justify-center rounded-full border border-[#cad4df] text-4xl font-semibold text-[#ff7a1a]">
                   {metric.value}
                 </div>
@@ -298,6 +299,7 @@ export const HomePage: React.FC = () => {
               </article>
             ))}
           </div>
+          */}
         </div>
       </section>
 

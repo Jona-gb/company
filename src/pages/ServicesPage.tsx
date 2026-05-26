@@ -3,14 +3,9 @@ import { BarChart3, Code2, Layers, MonitorSmartphone, Palette, RefreshCw, Shield
 import { Hero } from '../components/Hero'
 import { ServiceCard } from '../components/ServiceCard'
 import { MainLayout } from '../layouts'
+import { imageUrls } from '../constants/images'
 
-const photos = {
-  webDevelopment: 'https://images.pexels.com/photos/12899161/pexels-photo-12899161.jpeg?cs=srgb&dl=pexels-mizunokozuki-12899161.jpg&fm=jpg',
-  optimization: 'https://images.pexels.com/photos/34069/pexels-photo.jpg?cs=srgb&dl=pexels-negativespace-34069.jpg&fm=jpg',
-  mobileApps: 'https://images.pexels.com/photos/4565770/pexels-photo-4565770.jpeg?cs=srgb&dl=pexels-plann-2999237-4565770.jpg&fm=jpg',
-  uiux: 'https://images.pexels.com/photos/6322367/pexels-photo-6322367.jpeg?cs=srgb&dl=pexels-ai25studioai-6322367.jpg&fm=jpg',
-  accessibility: 'https://images.pexels.com/photos/10567167/pexels-photo-10567167.jpeg?cs=srgb&dl=pexels-ron-lach-10567167.jpg&fm=jpg',
-}
+const photos = imageUrls.services
 
 export const ServicesPage: React.FC = () => {
   const webServices = [
@@ -46,7 +41,7 @@ export const ServicesPage: React.FC = () => {
       icon: MonitorSmartphone,
       title: 'Web Applications',
       description: 'Client portals, dashboards, and internal tools that bring together design clarity and practical functionality.',
-      image: photos.webDevelopment,
+      image: photos.webApplication,
       features: [
         'Dashboards and custom workflows',
         'Admin and client-facing portals',
@@ -78,7 +73,7 @@ export const ServicesPage: React.FC = () => {
       icon: Layers,
       title: 'Mobile Product UX',
       description: 'Interface systems and user journeys that help mobile products feel trustworthy from the first tap.',
-      image: photos.uiux,
+      image: photos.mobileUx,
       features: [
         'User flow design',
         'Wireframes and high-fidelity screens',
@@ -92,7 +87,7 @@ export const ServicesPage: React.FC = () => {
       icon: TrendingUp,
       title: 'Product Growth Support',
       description: 'Post-launch iteration focused on onboarding, retention, and measurable product improvements.',
-      image: photos.optimization,
+      image: photos.productGrowth,
       features: [
         'Behavior-based refinement',
         'Feature prioritization',
@@ -109,7 +104,7 @@ export const ServicesPage: React.FC = () => {
       icon: Palette,
       title: 'UI Design',
       description: 'Clean, modern interfaces that make your brand feel premium, capable, and easy to trust.',
-      image: photos.uiux,
+      image: photos.uiDesign,
       features: [
         'Landing page and website UI',
         'Reusable visual systems',
@@ -123,7 +118,7 @@ export const ServicesPage: React.FC = () => {
       icon: BarChart3,
       title: 'UX Design',
       description: 'Journey mapping and interface decisions that reduce confusion and guide people toward action.',
-      image: photos.uiux,
+      image: photos.uxDesign,
       features: [
         'User journey design',
         'Wireframes and content structure',

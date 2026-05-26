@@ -31,9 +31,7 @@ export const Navbar: React.FC = () => {
                 {link.label}
               </Link>
             ))}
-            <button className="rounded-full border border-[#dce3eb] p-3 text-[#101d2d] transition hover:border-[#ff7a1a] hover:text-[#ff7a1a]">
-              <Search size={16} />
-            </button>
+            
             <Link to="/contact" className="inline-flex items-center rounded-md bg-[#ff7a1a] px-5 py-3 text-[12px] font-semibold uppercase tracking-[0.18em] text-white transition hover:bg-[#f26f10]">
               Request support
             </Link>

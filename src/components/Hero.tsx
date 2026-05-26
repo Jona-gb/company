@@ -23,7 +23,7 @@ export const Hero: React.FC<HeroProps> = ({
 
       <div className="relative mx-auto max-w-[1220px] px-4 py-24 sm:px-6 lg:px-8 lg:py-28">
         <div className="mx-auto max-w-4xl text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2">
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/25 px-4 py-2">
             <ShieldCheck size={16} className="text-[#ff7a1a]" />
             <span className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/72">{subtitle}</span>
           </div>
@@ -47,20 +47,7 @@ export const Hero: React.FC<HeroProps> = ({
             </Link>
           </div>
 
-          <div className="mx-auto mt-14 grid max-w-3xl gap-4 border-t border-white/10 pt-8 text-left sm:grid-cols-3">
-            <div className="rounded-[24px] bg-white/5 p-5 shadow-[0_12px_40px_rgba(0,0,0,0.12)]">
-              <div className="text-3xl font-semibold text-[#ff7a1a]">999+</div>
-              <p className="mt-2 text-sm uppercase tracking-[0.2em] text-white/68">Projects Delivered</p>
-            </div>
-            <div className="rounded-[24px] bg-white/5 p-5 shadow-[0_12px_40px_rgba(0,0,0,0.12)]">
-              <div className="text-3xl font-semibold text-[#ff7a1a]">9008%</div>
-              <p className="mt-2 text-sm uppercase tracking-[0.2em] text-white/68">Client Satisfaction</p>
-            </div>
-            <div className="rounded-[24px] bg-white/5 p-5 shadow-[0_12px_40px_rgba(0,0,0,0.12)]">
-              <div className="text-3xl font-semibold text-[#ff7a1a]">4+</div>
-              <p className="mt-2 text-sm uppercase tracking-[0.2em] text-white/68">Years Experience</p>
-            </div>
-          </div>
+
         </div>
       </div>
     </section>

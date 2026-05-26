@@ -22,15 +22,12 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   return (
     <div className="glass-dark glow-border rounded-xl overflow-hidden card-hover group">
       {/* Image Container */}
-      <div className="relative h-48 overflow-hidden bg-slate-800">
-        <div
-          className="w-full h-full bg-gradient-to-br from-indigo-600/20 to-teal-600/20 flex items-center justify-center text-slate-400 group-hover:scale-110 transition-transform duration-500"
-          style={{
-            backgroundImage: `linear-gradient(135deg, rgba(79, 70, 229, 0.1) 0%, rgba(20, 184, 166, 0.1) 100%)`,
-          }}
-        >
-          {image}
-        </div>
+      <div className="relative h-48 overflow-hidden bg-slate-800 group-hover:scale-110 transition-transform duration-500">
+        <img
+          src={image}
+          alt={title}
+          className="w-full h-full object-cover"
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
       </div>
 

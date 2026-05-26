@@ -3,6 +3,7 @@ import { MainLayout } from '../layouts'
 import { Hero } from '../components/Hero'
 import { ProjectCard } from '../components/ProjectCard'
 import { Filter, X } from 'lucide-react'
+import { imageUrls } from '../constants/images'
 
 export const PortfolioPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('')
@@ -13,25 +14,17 @@ export const PortfolioPage: React.FC = () => {
       title: 'E-Commerce Platform',
       description: 'Full-stack marketplace with real-time inventory and payment processing.',
       category: 'Web',
-      image: '🛍️',
+      image: imageUrls.portfolio.ecommerce,
       tags: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
       link: '#'
     },
-    {
-      id: '2',
-      title: 'Mobile Fitness App',
-      description: 'Cross-platform fitness tracking with AI-powered workout recommendations.',
-      category: 'Mobile',
-      image: '💪',
-      tags: ['React Native', 'Firebase', 'ML Kit'],
-      link: '#'
-    },
+
     {
       id: '3',
       title: 'Analytics Dashboard',
       description: 'Real-time data visualization platform for enterprise analytics.',
       category: 'Web',
-      image: '📊',
+      image: imageUrls.portfolio.analytics,
       tags: ['React', 'D3.js', 'WebSocket', 'AWS'],
       link: '#'
     },
@@ -40,7 +33,7 @@ export const PortfolioPage: React.FC = () => {
       title: 'Design System Overhaul',
       description: 'Comprehensive UI kit redesign improving development efficiency by 40%.',
       category: 'Design',
-      image: '🎨',
+      image: imageUrls.portfolio.design,
       tags: ['Figma', 'Component Library', 'Accessibility'],
       link: '#'
     },
@@ -49,43 +42,28 @@ export const PortfolioPage: React.FC = () => {
       title: 'SaaS Management Tool',
       description: 'Enterprise SaaS platform with advanced permission and workflow systems.',
       category: 'Web',
-      image: '🔧',
+      image: imageUrls.portfolio.saas,
       tags: ['React', 'TypeScript', 'GraphQL', 'PostgreSQL'],
       link: '#'
     },
-    {
-      id: '6',
-      title: 'Progressive Web App',
-      description: 'Offline-capable PWA with native app performance and instant loading.',
-      category: 'Mobile',
-      image: '📱',
-      tags: ['PWA', 'Service Workers', 'IndexedDB'],
-      link: '#'
-    },
+
     {
       id: '7',
       title: 'Content Management System',
       description: 'Headless CMS with intuitive editor and multi-language support.',
       category: 'Web',
-      image: '📝',
+      image: imageUrls.portfolio.cms,
       tags: ['Next.js', 'Prisma', 'MySQL', 'AWS S3'],
       link: '#'
     },
-    {
-      id: '8',
-      title: 'Mobile Banking App',
-      description: 'Secure mobile banking application with biometric authentication.',
-      category: 'Mobile',
-      image: '🏦',
-      tags: ['iOS', 'Android', 'Encryption', 'API Integration'],
-      link: '#'
-    },
+    
+
     {
       id: '9',
       title: 'Brand Redesign',
       description: 'Complete brand identity and website redesign increasing conversions by 35%.',
       category: 'Design',
-      image: '✨',
+      image: imageUrls.portfolio.branding,
       tags: ['Branding', 'UI/UX', 'Web Design'],
       link: '#'
     }
