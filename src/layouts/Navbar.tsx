@@ -17,7 +17,7 @@ export const Navbar: React.FC = () => {
       <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
         <div className="flex h-auto items-center justify-between py-2">
           <Link to="/" className="flex items-center gap-2 group hover:opacity-80 transition">
-            <img src="/assets/logo.png" alt="Huzz Solutions Logo" className="h-14 w-auto" />
+            <img src="/assets/logo2.png" alt="Huzz Solutions Logo" className="h-8 w-auto" />
             <p className="text-sm font-semibold text-[#101d2d]">Huzz Solutions</p>
           </Link>
 
