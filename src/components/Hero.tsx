@@ -1,53 +1,55 @@
 import React from 'react'
-import { ArrowRight, ShieldCheck } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 interface HeroProps {
   title?: string
   subtitle?: string
   description?: string
+  backgroundImage?: string
 }
 
 export const Hero: React.FC<HeroProps> = ({
-  title = 'Transform Your Vision Into Digital Reality',
-  subtitle = 'Technology & IT Services',
-  description = 'Infrastructure, security, and product delivery for businesses that need scalable systems and dependable execution.',
+  title = 'Digital work built with clarity',
+  subtitle = 'Huzz Solutions',
+  description = 'We help businesses design, build, and improve practical digital experiences that look professional and work reliably.',
+  backgroundImage,
 }) => {
   return (
-    <section className="relative overflow-hidden border-b border-[#24374c] bg-[#0f1d2d]">
-      <div className="absolute inset-0">
-        <div className="absolute left-0 top-0 h-full w-full bg-[radial-gradient(circle_at_top_left,rgba(255,122,26,0.18),transparent_26%),linear-gradient(135deg,rgba(15,29,45,0.95),rgba(15,29,45,0.98))]" />
-        <div className="absolute -right-8 top-10 h-72 w-72 rounded-full border border-[#ff7a1a]/25" />
-        <div className="absolute right-20 top-24 h-52 w-52 rounded-full border border-white/10" />
-      </div>
-
-      <div className="relative mx-auto max-w-[1220px] px-4 py-24 sm:px-6 lg:px-8 lg:py-28">
-        <div className="mx-auto max-w-4xl text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/25 px-4 py-2">
-            <ShieldCheck size={16} className="text-[#ff7a1a]" />
-            <span className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/72">{subtitle}</span>
+    <section className="relative overflow-hidden border-b border-black/10 bg-white">
+      {backgroundImage && (
+        <div className="pointer-events-none absolute inset-0">
+          <img src={backgroundImage} alt="" className="h-full w-full object-cover opacity-80 brightness-90" />
+          <div className="absolute inset-0 bg-white/85 backdrop-blur-xl" />
+        </div>
+      )}
+      <div className="relative z-10 mx-auto max-w-[1240px] px-5 py-16 min-h-[420px] sm:px-8 lg:px-12 lg:py-20">
+        <div className="grid gap-10 lg:grid-cols-[0.85fr_0.45fr] lg:items-end">
+          <div>
+            <p className="text-[12px] font-bold uppercase tracking-[0.18em] text-orange-600">{subtitle}</p>
+            <h1 className="mt-5 max-w-[780px] text-5xl font-extrabold leading-[1.02] tracking-[-0.035em] text-black sm:text-6xl">
+              {title}
+            </h1>
+            <p className="mt-6 max-w-[650px] text-base leading-8 text-black/64">
+              {description}
+            </p>
           </div>
 
-          <h1 className="mt-8 text-5xl font-semibold leading-[0.95] text-white md:text-7xl">
-            {title}
-          </h1>
-
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[#c7d2df]">
-            {description}
-          </p>
-
-          <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-            <Link to="/contact" className="btn-primary flex items-center justify-center gap-2 group">
-              Start Your Project
-              <ArrowRight size={18} className="transition-transform duration-300 group-hover:translate-x-1" />
-            </Link>
-            <Link to="/portfolio" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-md border-2 border-[#ff7a1a] text-[#ff7a1a] font-semibold text-sm uppercase tracking-[0.18em] transition-all duration-300 hover:bg-[#ff7a1a] hover:text-white hover:shadow-[0_8px_24px_rgba(255,122,26,0.3)] group">
-              View Portfolio
-              <ArrowRight size={18} className="transition-transform duration-300 group-hover:translate-x-1" />
-            </Link>
+          <div className="rounded-lg border border-black/10 bg-white p-5 shadow-[0_18px_50px_rgba(20,20,20,0.06)]">
+            <p className="text-sm font-bold text-black">Have a project in mind?</p>
+            <p className="mt-2 text-sm leading-6 text-black/60">
+              Share your goals and we will help shape the next practical step.
+            </p>
+            <div className="mt-5 flex gap-3">
+              <Link to="/contact" className="inline-flex items-center gap-2 rounded-md bg-black px-4 py-3 text-sm font-bold text-white transition hover:bg-orange-600">
+                Start
+                <ArrowRight size={16} />
+              </Link>
+              <Link to="/portfolio" className="inline-flex items-center gap-2 rounded-md border border-[#ded8cf] px-4 py-3 text-sm font-bold text-black transition hover:border-black">
+                Work
+              </Link>
+            </div>
           </div>
-
-
         </div>
       </div>
     </section>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { ExternalLink } from 'lucide-react'
+import { ArrowUpRight } from 'lucide-react'
 
 interface ProjectCardProps {
   id: string
@@ -20,21 +20,18 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   link,
 }) => {
   return (
-    <div className="glass-dark glow-border rounded-xl overflow-hidden card-hover group">
-      {/* Image Container */}
-      <div className="relative h-48 overflow-hidden bg-slate-800 group-hover:scale-110 transition-transform duration-500">
+    <article className="group overflow-hidden rounded-lg border border-[#ece8e2] bg-white shadow-[0_18px_45px_rgba(20,20,20,0.05)] transition hover:-translate-y-1 hover:border-[#ded8cf]">
+      <div className="relative h-56 overflow-hidden bg-white">
         <img
           src={image}
           alt={title}
-          className="w-full h-full object-cover"
+          className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
       </div>
 
-      {/* Content */}
       <div className="p-6">
-        <div className="flex items-center justify-between mb-3">
-          <span className="inline-block px-3 py-1 bg-indigo-500/20 text-indigo-300 text-xs font-semibold rounded-full border border-indigo-500/30">
+        <div className="mb-4 flex items-center justify-between gap-3">
+          <span className="rounded-md bg-orange-50 px-3 py-1 text-xs font-bold uppercase tracking-[0.12em] text-orange-700">
             {category}
           </span>
           {link && (
@@ -42,30 +39,28 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
               href={link}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 hover:bg-slate-700 rounded-lg transition-colors duration-300"
+              className="flex h-9 w-9 items-center justify-center rounded-md border border-[#ece8e2] text-black transition hover:border-orange-600 hover:text-orange-600"
+              aria-label={`Open ${title}`}
             >
-              <ExternalLink size={18} className="text-slate-400 group-hover:text-indigo-400" />
+              <ArrowUpRight size={17} />
             </a>
           )}
         </div>
 
-        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-indigo-400 transition-colors duration-300">
-          {title}
-        </h3>
-        <p className="text-slate-400 text-sm mb-4 line-clamp-2">{description}</p>
+        <h3 className="text-xl font-extrabold tracking-[-0.02em] text-black">{title}</h3>
+        <p className="mt-3 text-sm leading-7 text-black/62">{description}</p>
 
-        {/* Tech Stack */}
-        <div className="flex flex-wrap gap-2">
-          {tags.map(tag => (
+        <div className="mt-5 flex flex-wrap gap-2">
+          {tags.slice(0, 4).map(tag => (
             <span
               key={tag}
-              className="px-3 py-1 bg-slate-800/50 text-slate-300 text-xs rounded-full border border-slate-700/50 hover:border-slate-600 transition-colors duration-300"
+              className="rounded-md border border-black/10 px-3 py-1 text-xs font-semibold text-black/58"
             >
               {tag}
             </span>
           ))}
         </div>
       </div>
-    </div>
+    </article>
   )
 }

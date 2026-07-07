@@ -2,7 +2,7 @@ import React, { useState, useMemo } from 'react'
 import { MainLayout } from '../layouts'
 import { Hero } from '../components/Hero'
 import { ProjectCard } from '../components/ProjectCard'
-import { Filter, X } from 'lucide-react'
+import { ArrowRight, X } from 'lucide-react'
 import { imageUrls } from '../constants/images'
 
 export const PortfolioPage: React.FC = () => {
@@ -78,31 +78,32 @@ export const PortfolioPage: React.FC = () => {
 
   return (
     <MainLayout>
-      {/* Hero Section */}
       <Hero
         title="Our Work Speaks for Itself"
         subtitle="Featured Projects & Case Studies"
         description="Explore a selection of projects that showcase our expertise across web, mobile, and design disciplines."
+        backgroundImage={imageUrls.portfolio.hero}
       />
 
-      {/* Portfolio Section */}
-      <section className="py-24 bg-gradient-to-b from-white via-[#f8fafb] to-white">
-        <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
-          {/* Filter Section */}
-          <div className="mb-16">
-            <div className="flex items-center gap-3 mb-8">
-              <Filter size={20} className="text-[#ff7a1a]" />
-              <span className="text-xs font-semibold uppercase tracking-[0.24em] text-[#ff7a1a]">FILTER BY CATEGORY</span>
+      <section className="bg-white py-16">
+        <div className="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-12">
+          <div className="mb-10 flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+            <div>
+              <p className="text-[12px] font-bold uppercase tracking-[0.18em] text-orange-600">Portfolio</p>
+              <h2 className="mt-3 text-3xl font-extrabold tracking-[-0.02em] text-black sm:text-4xl">Selected digital work</h2>
+              <p className="mt-4 max-w-2xl text-base leading-8 text-black/62">
+                A focused sample of websites, tools, and design systems shaped for clarity and business value.
+              </p>
             </div>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-2">
               {categories.map(category => (
                 <button
                   key={category}
                   onClick={() => setSelectedCategory(category === 'All' ? '' : category)}
-                  className={`px-6 py-2.5 rounded-lg font-semibold text-sm uppercase tracking-[0.18em] transition-all duration-300 ${
+                  className={`rounded-md px-4 py-2.5 text-sm font-bold transition ${
                     (!selectedCategory && category === 'All') || selectedCategory === category
-                      ? 'bg-[#ff7a1a] text-white shadow-[0_8px_24px_rgba(255,122,26,0.3)] hover:shadow-[0_12px_32px_rgba(255,122,26,0.4)]'
-                      : 'bg-white border-2 border-[#e5e7eb] text-[#101d2d] hover:border-[#ff7a1a] hover:text-[#ff7a1a] transition-all'
+                      ? 'bg-black text-white'
+                      : 'border border-[#ece8e2] bg-white text-black/64 hover:border-orange-600 hover:text-orange-600'
                   }`}
                 >
                   {category}
@@ -111,8 +112,7 @@ export const PortfolioPage: React.FC = () => {
             </div>
           </div>
 
-          {/* Projects Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
             {filteredProjects.map(project => (
               <ProjectCard
                 key={project.id}
@@ -127,13 +127,12 @@ export const PortfolioPage: React.FC = () => {
             ))}
           </div>
 
-          {/* No Results */}
           {filteredProjects.length === 0 && (
-            <div className="text-center py-16">
-              <p className="text-xl font-medium text-[#617080] mb-6">No projects found in this category</p>
+            <div className="rounded-lg border border-black/10 bg-white py-16 text-center">
+              <p className="mb-6 text-base font-semibold text-black/62">No projects found in this category</p>
               <button
                 onClick={() => setSelectedCategory('')}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-[#ff7a1a] text-white font-semibold uppercase tracking-[0.18em] text-sm transition-all hover:bg-[#f26f10] hover:shadow-[0_8px_24px_rgba(255,122,26,0.3)]"
+                className="inline-flex items-center gap-2 rounded-md bg-black px-6 py-3 text-sm font-bold text-white transition hover:bg-orange-600"
               >
                 <X size={18} />
                 Clear Filters
@@ -143,42 +142,33 @@ export const PortfolioPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Results Summary */}
-      <section className="py-12 bg-white border-t border-[#e5e7eb]">
-        <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <p className="text-[#617080] text-base font-medium">
-              Showing <span className="font-semibold text-[#101d2d]">{filteredProjects.length}</span> of <span className="font-semibold text-[#101d2d]">{projects.length}</span> projects
+      <section className="border-y border-black/10 bg-white py-8">
+        <div className="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-12">
+          <p className="text-sm font-semibold text-black/58">
+            Showing <span className="font-extrabold text-black">{filteredProjects.length}</span> of <span className="font-extrabold text-black">{projects.length}</span> projects
               {selectedCategory && selectedCategory !== 'All' && (
-                <span className="text-[#ff7a1a]"> in {selectedCategory}</span>
+              <span className="text-orange-600"> in {selectedCategory}</span>
               )}
-            </p>
-          </div>
+          </p>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="relative overflow-hidden bg-[#0f1d2d] py-24 sm:py-32">
-        <div className="absolute inset-0">
-          <div className="absolute left-0 top-0 h-full w-full bg-[radial-gradient(circle_at_top_left,rgba(255,122,26,0.15),transparent_30%)]" />
-          <div className="absolute -right-20 top-1/2 h-80 w-80 rounded-full border border-[#ff7a1a]/15" />
-        </div>
-        <div className="relative mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#ff7a1a] mb-4">Ready to start?</p>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-white leading-tight mb-6">
-            Your Project Could Be <span className="text-[#ff7a1a]">Next</span>
+      <section className="bg-black py-16">
+        <div className="mx-auto max-w-[900px] px-5 text-center sm:px-8 lg:px-12">
+          <p className="mb-4 text-[12px] font-bold uppercase tracking-[0.18em] text-orange-500">Ready to start?</p>
+          <h2 className="text-3xl font-extrabold leading-tight tracking-[-0.02em] text-white sm:text-5xl">
+            Your project could be next.
           </h2>
-          <p className="mx-auto max-w-2xl text-lg text-[#d7e0ea] mb-10">
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-white/68">
             Let's collaborate to create a portfolio-worthy project that delivers real business results.
           </p>
-          <a href="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-[#ff7a1a] text-white font-semibold uppercase tracking-[0.18em] text-sm transition-all hover:bg-[#f26f10] hover:shadow-[0_12px_32px_rgba(255,122,26,0.3)] group">
+          <a href="/contact" className="mt-8 inline-flex items-center gap-2 rounded-md bg-white px-6 py-3 text-sm font-bold text-black transition hover:bg-orange-500 hover:text-white">
             Start a New Project
-            <svg className="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
+            <ArrowRight size={17} />
           </a>
         </div>
       </section>
     </MainLayout>
   )
 }
+

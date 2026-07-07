@@ -20,20 +20,20 @@ export const FormInput: React.FC<FormInputProps> = ({
   required = false,
   options,
 }) => {
-  const baseClasses = 'w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 transition-all duration-300'
+  const baseClasses = 'w-full rounded-md border border-[#ded8cf] bg-white px-4 py-3 text-sm text-black placeholder-black/35 outline-none transition focus:border-orange-600 focus:ring-4 focus:ring-orange-100'
 
   return (
     <div>
-      <label className="block text-sm font-semibold text-white mb-2">
+      <label className="mb-2 block text-sm font-bold text-black">
         {label}
-        {required && <span className="text-indigo-400 ml-1">*</span>}
+        {required && <span className="ml-1 text-orange-600">*</span>}
       </label>
       {type === 'textarea' ? (
         <textarea
           placeholder={placeholder}
           value={value}
           onChange={e => onChange(e.target.value)}
-          rows={4}
+          rows={5}
           className={baseClasses}
         />
       ) : type === 'select' && options ? (
@@ -74,25 +74,25 @@ export const SuccessMessage: React.FC<SuccessMessageProps> = ({
   details,
 }) => {
   return (
-    <div className="text-center py-12">
+    <div className="rounded-lg border border-[#ece8e2] bg-white p-8 text-center shadow-[0_18px_45px_rgba(20,20,20,0.06)]">
       <div className="mb-6 flex justify-center">
-        <div className="p-4 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-full">
-          <CheckCircle2 size={48} className="text-emerald-400" />
+        <div className="flex h-16 w-16 items-center justify-center rounded-full bg-orange-50 text-orange-600">
+          <CheckCircle2 size={34} />
         </div>
       </div>
-      <h2 className="text-3xl font-bold text-white mb-3">{title}</h2>
-      <p className="text-lg text-slate-400 mb-6">{message}</p>
+      <h2 className="text-3xl font-extrabold tracking-[-0.02em] text-black">{title}</h2>
+      <p className="mx-auto mt-3 max-w-md text-base leading-7 text-black/62">{message}</p>
       {details && (
-        <div className="space-y-2 text-slate-300 mb-8">
-          {details.map((detail, idx) => (
-            <p key={idx} className="flex items-center justify-center gap-2">
-              <CheckCircle2 size={18} className="text-emerald-400" />
+        <div className="mx-auto mt-6 grid max-w-md gap-3 text-left">
+          {details.map(detail => (
+            <p key={detail} className="flex items-start gap-3 text-sm leading-6 text-black/68">
+              <CheckCircle2 size={17} className="mt-1 shrink-0 text-orange-600" />
               {detail}
             </p>
           ))}
         </div>
       )}
-      <a href="/" className="btn-primary inline-flex items-center">
+      <a href="/" className="mt-8 inline-flex items-center justify-center rounded-md bg-black px-6 py-3 text-sm font-bold text-white transition hover:bg-orange-600">
         Back to Home
       </a>
     </div>

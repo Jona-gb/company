@@ -150,17 +150,19 @@ export const ServicesPage: React.FC = () => {
         title="Web, Mobile, Optimization, and Design"
         subtitle="What We Build"
         description="We create web applications and websites, mobile apps, website optimization improvements, and UI/UX design systems that help brands look better and perform better."
+        backgroundImage={photos.sectionServices}
       />
 
-      <section className="bg-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-16">
-            <h2 className="section-title mb-4 text-4xl font-semibold text-[#101d2d]">Web Development & Web Applications</h2>
-            <p className="max-w-3xl text-xl text-[#617080]">
+      <section className="bg-white py-16">
+        <div className="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-12">
+          <div className="mb-10">
+            <p className="text-[12px] font-bold uppercase tracking-[0.18em] text-orange-600">Web</p>
+            <h2 className="mt-3 text-3xl font-extrabold tracking-[-0.02em] text-black sm:text-4xl">Websites & web applications</h2>
+            <p className="mt-4 max-w-3xl text-base leading-8 text-black/62">
               From polished marketing sites to custom web platforms, we build digital products that are fast, dependable, and easier for customers to use.
             </p>
           </div>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
             {webServices.map((service, idx) => (
               <ServiceCard
                 key={idx}
@@ -176,15 +178,16 @@ export const ServicesPage: React.FC = () => {
         </div>
       </section>
 
-      <section className="bg-[#f6f8fb] py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-16">
-            <h2 className="section-title mb-4 text-4xl font-semibold text-[#101d2d]">Mobile App Development</h2>
-            <p className="max-w-3xl text-xl text-[#617080]">
+      <section className="border-y border-[#ece8e2] bg-[#fbfaf8] py-16">
+        <div className="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-12">
+          <div className="mb-10">
+            <p className="text-[12px] font-bold uppercase tracking-[0.18em] text-orange-600">Mobile</p>
+            <h2 className="mt-3 text-3xl font-extrabold tracking-[-0.02em] text-black sm:text-4xl">Mobile app development</h2>
+            <p className="mt-4 max-w-3xl text-base leading-8 text-black/62">
               We design and build mobile experiences that feel intuitive, consistent, and ready for real users instead of just demos.
             </p>
           </div>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
             {mobileServices.map((service, idx) => (
               <ServiceCard
                 key={idx}
@@ -199,15 +202,16 @@ export const ServicesPage: React.FC = () => {
         </div>
       </section>
 
-      <section className="bg-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-16">
-            <h2 className="section-title mb-4 text-4xl font-semibold text-[#101d2d]">UI/UX Design & Optimization</h2>
-            <p className="max-w-3xl text-xl text-[#617080]">
+      <section className="bg-white py-16">
+        <div className="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-12">
+          <div className="mb-10">
+            <p className="text-[12px] font-bold uppercase tracking-[0.18em] text-orange-600">Design</p>
+            <h2 className="mt-3 text-3xl font-extrabold tracking-[-0.02em] text-black sm:text-4xl">UI/UX design & optimization</h2>
+            <p className="mt-4 max-w-3xl text-base leading-8 text-black/62">
               Better design is not just visual. We improve clarity, speed, hierarchy, and user flow so the entire experience feels more welcoming.
             </p>
           </div>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
             {designServices.map((service, idx) => (
               <ServiceCard
                 key={idx}
@@ -222,30 +226,32 @@ export const ServicesPage: React.FC = () => {
         </div>
       </section>
 
-      <section className="border-t border-[#dce3eb] bg-[#f6f8fb] py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="section-title mb-16 text-center text-4xl font-semibold text-[#101d2d]">Our Process</h2>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-4">
+      <section className="border-y border-[#ece8e2] bg-[#fbfaf8] py-16">
+        <div className="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-12">
+          <div className="mb-10 text-center">
+            <p className="text-[12px] font-bold uppercase tracking-[0.18em] text-orange-600">Process</p>
+            <h2 className="mt-3 text-3xl font-extrabold tracking-[-0.02em] text-black sm:text-4xl">How projects move</h2>
+          </div>
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-4">
             {['Discovery', 'Design', 'Build', 'Deploy'].map((step, idx) => (
               <div key={idx} className="relative">
-                <div className="rounded-2xl border border-[#dce3eb] bg-white p-8 text-center shadow-[0_18px_50px_rgba(16,29,45,0.08)]">
-                  <div className="mb-2 text-3xl font-bold text-[#ff7a1a]">0{idx + 1}</div>
-                  <h3 className="text-lg font-semibold text-[#101d2d]">{step}</h3>
+                <div className="rounded-lg border border-[#ece8e2] bg-white p-6 shadow-[0_18px_45px_rgba(20,20,20,0.05)]">
+                  <div className="mb-4 text-sm font-extrabold text-orange-600">0{idx + 1}</div>
+                  <h3 className="text-lg font-extrabold text-black">{step}</h3>
                 </div>
-                {idx < 3 && <div className="absolute top-1/2 -right-3 hidden h-0.5 w-6 bg-[#ff7a1a] md:block"></div>}
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-[#101d2d] py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="mb-6 text-4xl font-bold text-white md:text-5xl">Let's build something people enjoy using</h2>
-          <p className="mb-8 text-lg text-[#c7d2df]">
+      <section className="bg-black py-16">
+        <div className="mx-auto max-w-4xl px-5 text-center sm:px-8 lg:px-12">
+          <h2 className="text-3xl font-extrabold tracking-[-0.02em] text-white md:text-5xl">Let's build something people enjoy using</h2>
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-white/68">
             Whether it is a web app, mobile app, faster website, or better UI/UX, we can shape it into something clearer and more compelling.
           </p>
-          <a href="/contact" className="btn-primary inline-flex items-center gap-2">
+          <a href="/contact" className="mt-8 inline-flex items-center gap-2 rounded-md bg-white px-6 py-3 text-sm font-bold text-black transition hover:bg-orange-500 hover:text-white">
             Get Started Today
           </a>
         </div>
@@ -253,3 +259,4 @@ export const ServicesPage: React.FC = () => {
     </MainLayout>
   )
 }
+

@@ -1,0 +1,119 @@
+
+> modern-agency-site@1.0.0 dev
+> vite --host 127.0.0.1
+
+
+  [32m[1mVITE[22m v5.4.21[39m  [2mready in [0m[1m461[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://127.0.0.1:[1m5173[22m/[39m
+[2m10:24:48 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx, /src/index.css[22m
+[2m10:26:30 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx[22m
+[2m10:27:27 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/layouts/Navbar.tsx, /src/index.css[22m
+[2m10:27:35 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/layouts/Footer.tsx, /src/index.css[22m
+[2m10:28:10 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/layouts/Footer.tsx, /src/index.css[22m
+[2m10:32:55 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Hero.tsx, /src/index.css[22m
+[2m10:34:37 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Hero.tsx[22m
+[2m10:34:43 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/ServiceCard.tsx, /src/index.css[22m
+[2m10:36:03 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/ServiceCard.tsx[22m
+[2m10:36:09 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/ProjectCard.tsx, /src/index.css[22m
+[2m10:38:46 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/ProjectCard.tsx[22m
+[2m10:39:11 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/FormComponents.tsx, /src/index.css[22m
+[2m10:44:40 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/FormComponents.tsx[22m
+[2m10:45:58 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/ServicesPage.tsx, /src/index.css[22m
+[2m10:47:16 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/PortfolioPage.tsx, /src/index.css[22m
+[2m10:49:31 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/ContactPage.tsx, /src/index.css[22m
+[2m10:51:41 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/ContactPage.tsx[22m
+[2m10:52:15 pm[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/components/FeaturesOverview.tsx[22m
+[2m10:53:12 pm[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/components/FeaturesOverview.tsx[22m
+[2m10:55:34 pm[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/components/StatCard.tsx[22m
+[2m10:55:52 pm[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/pages/NotFoundPage.tsx[22m
+[2m10:56:03 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m10:56:22 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m10:59:58 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx, /src/index.css[22m
+[2m11:02:26 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx[22m
+[2m11:07:28 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx[22m
+[2m7:21:40 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx[22m
+[2m7:48:57 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx[22m
+[2m7:50:39 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx[22m
+[2m7:51:21 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx[22m
+[2m7:51:32 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx[22m
+[2m7:57:47 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx[22m
+[2m9:16:57 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx[22m
+[2m9:23:17 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx[22m
+[2m9:23:57 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx[22m
+[2m9:26:31 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m9:29:37 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m9:33:01 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m9:33:01 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx[22m
+[2m9:33:28 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx[22m
+[2m9:33:39 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx[22m
+[2m9:33:41 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx[22m
+[2m9:33:55 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx[22m
+[2m9:33:58 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx[22m
+[2m9:34:05 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx[22m
+[2m9:34:08 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx[22m
+[2m9:34:22 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx[22m
+[2m9:34:25 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx[22m
+[2m9:34:27 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx[22m
+[2m9:34:32 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx[22m
+[2m9:38:23 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m9:38:43 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m9:55:38 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m10:00:14 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m10:00:35 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m10:03:09 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m10:04:44 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx, /src/index.css[22m
+[2m10:04:45 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx, /src/index.css[22m
+[2m10:06:43 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/PortfolioPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/HomePage.tsx[22m
+[2m10:10:16 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/PortfolioPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/HomePage.tsx[22m
+[2m10:12:49 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/PortfolioPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/HomePage.tsx[22m
+[2m10:16:22 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/PortfolioPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/HomePage.tsx[22m
+[2m10:22:03 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx, /src/index.css[22m
+[2m10:23:13 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx, /src/index.css[22m
+[2m10:24:17 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx, /src/index.css[22m
+[2m10:25:27 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx, /src/index.css[22m
+[2m10:26:26 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx, /src/index.css[22m
+[2m10:26:26 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m10:27:07 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx, /src/index.css[22m
+[2m10:28:47 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx, /src/index.css[22m
+[2m10:28:53 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx, /src/index.css[22m
+[2m10:31:39 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx, /src/index.css[22m
+[2m10:35:54 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx, /src/index.css[22m
+[2m10:38:49 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx, /src/index.css[22m
+[2m10:51:05 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx, /src/index.css[22m
+[2m10:52:28 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx, /src/index.css[22m
+[2m10:54:06 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx, /src/index.css[22m
+[2m10:56:59 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx, /src/index.css[22m
+[2m10:57:58 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx, /src/index.css[22m
+[2m10:59:10 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx, /src/index.css[22m
+[2m10:59:26 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx, /src/index.css[22m
+[2m11:00:28 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx, /src/index.css[22m
+[2m11:01:50 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/layouts/Navbar.tsx, /src/index.css[22m
+[2m11:01:58 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/layouts/Navbar.tsx, /src/index.css[22m
+[2m11:02:04 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/layouts/Navbar.tsx, /src/index.css[22m
+[2m11:02:13 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/layouts/Navbar.tsx, /src/index.css[22m
+[2m11:03:21 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx, /src/index.css[22m
+[2m11:04:35 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx, /src/index.css[22m
+[2m11:04:42 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx, /src/index.css[22m
+[2m11:05:58 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx, /src/index.css[22m
+[2m11:08:41 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/PortfolioPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/HomePage.tsx[22m
+[2m11:08:41 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx, /src/index.css[22m
+[2m11:08:56 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.tsx, /src/index.css[22m
+[2m11:08:56 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/layouts/Navbar.tsx, /src/index.css[22m
+[2m11:08:56 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/PortfolioPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/HomePage.tsx[22m
+[2m11:12:05 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/PortfolioPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/HomePage.tsx[22m
+[2m11:12:05 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Hero.tsx, /src/index.css[22m
+[2m11:12:05 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/ServicesPage.tsx, /src/index.css[22m
+[2m11:12:05 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/PortfolioPage.tsx, /src/index.css[22m
+[2m11:12:52 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Hero.tsx, /src/index.css[22m
+[2m11:13:49 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/ContactPage.tsx, /src/index.css[22m
+[2m11:14:10 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/ContactPage.tsx, /src/index.css[22m
+[2m11:15:54 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/PortfolioPage.tsx, /src/pages/ServicesPage.tsx, /src/pages/HomePage.tsx[22m
+[2m11:15:54 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Hero.tsx, /src/index.css[22m
+[2m11:15:54 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/ServicesPage.tsx, /src/index.css[22m
+[2m11:15:54 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/PortfolioPage.tsx, /src/index.css[22m
+[2m11:15:54 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/ContactPage.tsx, /src/index.css[22m
+[2m11:16:05 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Hero.tsx, /src/index.css[22m
+[2m11:25:15 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/layouts/index.tsx, /src/index.css[22m
+[2m11:25:15 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m11:25:15 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Hero.tsx, /src/index.css[22m

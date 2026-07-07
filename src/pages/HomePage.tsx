@@ -1,61 +1,34 @@
 import React from 'react'
-import { ArrowRight, CheckCircle2, Code2, MonitorSmartphone, MoveRight, PlayCircle, ShieldCheck, Smartphone, Users, Palette } from 'lucide-react'
+import { ArrowRight, CheckCircle2, Code2, MonitorSmartphone, ShieldCheck, Smartphone, Users, Palette } from 'lucide-react'
 import { MainLayout } from '../layouts'
 import { imageUrls } from '../constants/images'
 
 const photos = imageUrls.services
 
-const highlightCards = [
-  {
-    title: 'Web development & web applications',
-    tone: 'bg-[#ff7a1a]',
-    text: 'Custom business websites, portals, and web apps that look polished and work hard.',
-  },
-  {
-    title: 'Mobile app development',
-    tone: 'bg-[linear-gradient(135deg,#f0f4f8_0%,#d8e2ef_100%)]',
-    text: 'Cross-platform mobile experiences designed to feel smooth, useful, and easy to trust.',
-  },
-  {
-    title: 'Website optimization & UI/UX design',
-    tone: 'bg-[#ff7a1a]',
-    text: 'Faster sites, clearer journeys, and stronger visual systems that help visitors convert.',
-  },
-]
+
 
 const serviceCards = [
-  { 
-    title: 'Web development', 
-    icon: Code2, 
-    image: photos.webDevelopment,
-    description: 'Custom-built websites and web platforms designed for performance and conversion. We combine modern frameworks with strategic UX to create experiences that engage visitors and drive results.'
+  {
+    title: 'Web Development',
+    icon: Code2,
+    description: 'Modern websites and platforms built for speed, accessibility, and measurable results.',
   },
-  { 
-    title: 'Web application', 
-    icon: MonitorSmartphone, 
-    image: photos.webApplication,
-    description: 'Robust, scalable web applications built with clean architecture. From complex dashboards to real-time collaboration tools, we deliver solutions that solve real business problems with elegant interfaces.'
+  {
+    title: 'Web Applications',
+    icon: MonitorSmartphone,
+    description: 'Enterprise-ready web apps with polished UI, clean architecture, and seamless collaboration.',
   },
-  { 
-    title: 'Mobile app development', 
-    icon: Smartphone, 
-    image: photos.mobileApps,
-    description: 'Native and cross-platform mobile experiences that feel intuitive and responsive. We prioritize performance, accessibility, and user delight to create apps that users actually love.'
+  {
+    title: 'Mobile Products',
+    icon: Smartphone,
+    description: 'Native and cross-platform apps designed for ease of use, retention, and everyday value.',
   },
-  { 
-    title: 'UI & UX design', 
-    icon: Users, 
-    image: photos.uiDesign,
-    description: 'Strategic design that balances aesthetics with usability. We research, prototype, and iterate to create interfaces that are both beautiful and functional, ensuring every pixel serves a purpose.'
+  {
+    title: 'UI / UX Design',
+    icon: Users,
+    description: 'Clear interaction systems and visual identities that feel premium without being overdesigned.',
   },
 ]
-
-/*const metrics = [
-  { value: '54', label: 'Projects completed' },
-  { value: '20', label: 'Happy customers' },
-  { value: '40', label: 'Project deployments' },
-  { value: '10', label: 'Project collaborations' },
-]*/
 
 const team = [
   { name: 'Eliezer Ahorlu', role: 'Web Application Lead', image: imageUrls.team.eliezer },
@@ -66,173 +39,157 @@ const team = [
 export const HomePage: React.FC = () => {
   return (
     <MainLayout>
-      <section className="border-b border-[#dfe5ec] bg-white">
-        <div className="mx-auto max-w-[1240px] px-4 py-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-[#6b7887] md:flex-row md:items-center md:justify-between">
-            <div className="flex flex-wrap items-center gap-4">
-              <span>Web applications</span>
-              <span className="hidden h-1 w-1 rounded-full bg-[#ff7a1a] md:block" />
-              <span>Mobile apps</span>
-              <span className="hidden h-1 w-1 rounded-full bg-[#ff7a1a] md:block" />
-              <span>UI / UX design</span>
-            </div>
-            <div className="flex flex-wrap items-center gap-4">
-              <span>huzzghana@gmail.com</span>
-              <span>+233 203 530 777</span>
-            </div>
+      <section className="bg-white border-b border-[#e7ecf1]">
+        <div className="mx-auto flex flex-col gap-4 px-4 py-4 text-[11px] font-semibold uppercase tracking-[0.24em] text-[#6b7887] sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+          <div className="flex flex-wrap items-center gap-4">
+            <span>Web apps</span>
+            <span className="hidden h-1 w-1 rounded-full bg-[#ff7a1a] sm:inline-block" />
+            <span>Mobile products</span>
+            <span className="hidden h-1 w-1 rounded-full bg-[#ff7a1a] sm:inline-block" />
+            <span>UX systems</span>
+          </div>
+          <div className="flex flex-wrap items-center gap-4">
+            <a href="mailto:huzzghana@gmail.com" className="transition hover:text-black">huzzghana@gmail.com</a>
+            <a href="tel:+233203530777" className="transition hover:text-black">+233 203 530 777</a>
           </div>
         </div>
       </section>
 
-      <section className="bg-white">
-        <div className="mx-auto max-w-[1240px] px-4 py-8 sm:px-6 lg:px-8 lg:py-10">
-          <div className="overflow-hidden rounded-[24px] border border-[#d7dee7] bg-[#0f1d2d] shadow-[0_24px_70px_rgba(11,26,43,0.16)]">
-            <div className="relative min-h-[520px] overflow-hidden sm:min-h-[560px]">
-              <img
-                src={photos.collaboration}
-                alt="Web development team collaborating in an office"
-                className="absolute inset-0 h-full w-full object-cover"
-              />
-              <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(15,29,45,0.92)_0%,rgba(15,29,45,0.78)_42%,rgba(15,29,45,0.28)_100%)]" />
-
-              <div className="relative z-10 flex min-h-[520px] items-center px-5 py-10 sm:min-h-[560px] sm:px-8 lg:px-12">
-                <div className="max-w-[610px]">
-                  <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/50 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/78 hover:bg-white/10 transition-colors">
-                    <ShieldCheck size={15} className="text-[#ff7a1a]" />
-                    Welcoming digital services
-                  </div>
-
-                  <h1 className="mt-5 max-w-[560px] text-[40px] font-semibold leading-[1.1] text-white sm:text-5xl lg:text-6xl tracking-[-1px]">
-                    Web, Mobile, UX <span className="text-[#ff7a1a] inline-block">&amp;</span> Optimization
-                  </h1>
-                  <p className="mt-5 max-w-[560px] text-base leading-8 text-[#d7e0ea] sm:text-lg">
-                    We design and build web applications, websites, mobile apps, and better user experiences that make your brand feel more approachable and more capable.
-                  </p>
-
-                  <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                    <a href="/contact" className="btn-primary inline-flex items-center justify-center gap-2 group">
-                      Get started now
-                      <ArrowRight size={17} className="transition-transform group-hover:translate-x-1" />
-                    </a>
-                    <a href="/services" className="btn-dark inline-flex items-center justify-center gap-2 group hover:bg-white/15 transition-colors">
-                      Explore services
-                      <MoveRight size={17} className="transition-transform group-hover:translate-x-1" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="relative z-10 bg-gradient-to-b from-white via-white to-[#f8fafb] pb-24 pt-32 sm:pt-36 lg:pt-40">
-        <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-6 lg:grid-cols-3">
-            {highlightCards.map((card, idx) => {
-              const icons = [Code2, Smartphone, Palette];
-              const Icon = icons[idx];
-              return (
-                <div
-                  key={card.title}
-                  className="group relative overflow-hidden rounded-2xl bg-white p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border border-[#e5e7eb]"
-                >
-                  <div className="absolute top-0 right-0 -mr-8 -mt-8 h-32 w-32 rounded-full bg-gradient-to-br from-[#ff7a1a]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  
-                  <div className="relative z-10">
-                    <div className="inline-flex rounded-lg bg-gradient-to-br from-[#ff7a1a]/10 to-[#ff7a1a]/5 p-3 mb-4">
-                      <Icon className="h-6 w-6 text-[#ff7a1a]" />
-                    </div>
-                    
-                    <h3 className="text-lg font-semibold text-[#101d2d] transition-colors group-hover:text-[#ff7a1a]">
-                      {card.title}
-                    </h3>
-                    <p className="mt-3 text-sm leading-6 text-[#617080]">
-                      {card.text}
-                    </p>
-                    <a
-                      href="/services"
-                      className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#ff7a1a] opacity-0 group-hover:opacity-100 transition-all duration-300 hover:gap-3"
-                    >
-                      Learn more
-                      <ArrowRight size={16} />
-                    </a>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-white py-16">
-        <div className="mx-auto grid max-w-[1240px] gap-10 px-4 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-8">
-          <div className="relative rounded-[28px] bg-[#f3f6fa] p-6 shadow-[0_24px_60px_rgba(13,31,48,0.08)] sm:p-8">
-            <div className="absolute -left-3 top-16 h-40 w-40 rounded-full border-[14px] border-[#111f2f]" />
-            <div className="relative z-10 grid gap-4 sm:grid-cols-[1.1fr_0.9fr]">
-              <div className="min-h-[300px] overflow-hidden rounded-[22px] bg-[linear-gradient(135deg,#102033_0%,#28405a_100%)] p-5 text-white">
-                <div className="-m-5 mb-5 h-40 overflow-hidden">
-                  <img src={photos.uxDesign} alt="Design team working on UI and UX ideas" className="h-full w-full object-cover opacity-80" />
-                </div>
-                <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-white/62">Case spotlight</p>
-                <div className="mt-6 rounded-[18px] bg-white/10 p-5 backdrop-blur-sm">
-                  <div className="flex items-center gap-3">
-                    <div className="h-12 w-12 rounded-full bg-[#ff7a1a]" />
-                    <div>
-                      <p className="font-semibold">Experience team</p>
-                      <p className="text-sm text-white/70">UI / UX direction</p>
-                    </div>
-                  </div>
-                  <p className="mt-8 text-4xl font-semibold">87,450</p>
-                  <p className="mt-2 text-sm text-white/72">Monthly supported interactions</p>
-                </div>
-              </div>
-              <div className="space-y-4">
-                <div className="h-36 overflow-hidden rounded-[22px]">
-                  <img src={photos.mobileApps} alt="Mobile app interface on a phone" className="h-full w-full object-cover" />
-                </div>
-                <div className="h-36 overflow-hidden rounded-[22px]">
-                  <img src={photos.optimization} alt="Analytics screen for website optimization" className="h-full w-full object-cover" />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex flex-col justify-center">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#ff7a1a]">About our company</p>
-            <h2 className="mt-4 max-w-[540px] text-4xl font-semibold leading-tight text-[#101d2d] sm:text-5xl">
-              Professional design and development for growing brands
-            </h2>
-            <p className="mt-6 max-w-[620px] text-base leading-8 text-[#617080]">
-              We help teams launch clearer websites, smarter web apps, better mobile experiences, and more usable interfaces. The goal is strong delivery without making the brand feel cold or overly technical.
+      <section className="bg-slate-50 py-12 sm:py-14">
+        <div className="mx-auto grid max-w-[1240px] gap-10 px-4 sm:px-6 lg:grid-cols-[minmax(380px,520px)_1fr] lg:items-center lg:px-12">
+          <div className="flex flex-col justify-center lg:min-h-[560px] lg:max-w-[520px]">
+            <p className="text-[12px] font-bold uppercase tracking-[0.24em] text-[#ff7a1a]">Digital growth for ambitious brands</p>
+            <h1 className="mt-4 max-w-3xl text-5xl font-extrabold tracking-[-0.04em] text-[#101827] sm:mt-5 sm:text-6xl">
+              Build elegant web and mobile experiences that feel trusted and easy to use.
+            </h1>
+            <p className="mt-4 max-w-2xl text-lg leading-7 text-black/70 sm:mt-6 sm:text-xl">
+              We design, develop, and optimize digital products with attention to clarity, conversion, and long-term brand consistency.
             </p>
 
-            <div className="mt-8 grid gap-4 sm:grid-cols-2">
-              {[
-                'Web application strategy',
-                'Mobile product planning',
-                'Website optimization audits',
-                'UI / UX design systems',
-              ].map(item => (
-                <div key={item} className="flex items-start gap-3 rounded-2xl bg-[#f6f8fb] p-4">
-                  <CheckCircle2 size={18} className="mt-0.5 text-[#ff7a1a]" />
-                  <span className="text-sm font-medium text-[#1a2b3f]">{item}</span>
-                </div>
-              ))}
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+              <a href="/contact" className="btn-primary inline-flex items-center justify-center gap-2">
+                Start a project
+                <ArrowRight size={18} />
+              </a>
+              <a href="/portfolio" className="btn-secondary inline-flex items-center justify-center gap-2">
+                See our work
+                <ArrowRight size={18} />
+              </a>
             </div>
 
-            <div className="mt-8 flex flex-wrap gap-4">
-              <a href="/contact" className="btn-primary inline-flex items-center gap-2">
-                Discover more
-                <ArrowRight size={16} />
-              </a>
-              <div className="flex items-center gap-3">
-                <div className="h-12 w-12 overflow-hidden rounded-full bg-[#101d2d]">
-                  <img src="/assets/IMG-20250202-WA0012.jpg" alt="Project lead" className="h-full w-full object-cover" />
+            <div className="mt-12 grid gap-4 sm:grid-cols-3">
+              
+            </div>
+          </div>
+
+          <div className="relative w-full h-[420px] sm:h-[500px] lg:h-[520px] overflow-hidden rounded-[32px] bg-black shadow-[0_28px_80px_rgba(0,0,0,0.18)]">
+            <img src={photos.collaboration} alt="Team collaborating on product design" className="h-full w-full object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-br from-black/95 via-black/70 to-black/0" />
+            <div className="relative flex h-full items-end p-8">
+              <div className="rounded-3xl border border-white/20 bg-black/50 p-6 backdrop-blur-xl text-white shadow-[0_14px_40px_rgba(0,0,0,0.25)]">
+                <p className="text-sm uppercase tracking-[0.22em] text-white/90">Feature launch support</p>
+                <p className="mt-4 text-2xl font-semibold text-white drop-shadow-[0_1px_4px_rgba(0,0,0,0.45)]">Launch faster with product-ready design and development.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-16 sm:py-20">
+        <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-10 lg:grid-cols-3">
+            {[
+              {
+                title: 'Digital strategy',
+                description: 'We shape digital offerings with clear goals, measurable milestones, and strong storytelling.',
+                icon: Code2,
+              },
+              {
+                title: 'Product design',
+                description: 'Design systems, interfaces, and flows that feel polished without losing simplicity.',
+                icon: Palette,
+              },
+              {
+                title: 'Optimization',
+                description: 'We improve performance, accessibility, and conversion so every touchpoint works harder.',
+                icon: ShieldCheck,
+              },
+            ].map((item) => (
+              <article key={item.title} className="group overflow-hidden rounded-[28px] border border-black/10 bg-white p-8 transition hover:-translate-y-1 hover:shadow-xl">
+                <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-orange-100 text-[#ff7a1a]">
+                  <item.icon size={24} />
                 </div>
-                <div>
-                  <p className="text-sm font-semibold text-[#101d2d]">Jonathan Gbekli</p>
-                  <p className="text-xs uppercase tracking-[0.18em] text-[#7f8b99]">Lead consultant</p>
+                <h2 className="mt-6 text-2xl font-semibold text-[#101827]">{item.title}</h2>
+                <p className="mt-4 text-sm leading-7 text-black/60">{item.description}</p>
+                <a href="/services" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#ff7a1a]">
+                  Learn how
+                  <ArrowRight size={16} />
+                </a>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="relative overflow-hidden bg-white py-16 sm:py-20">
+        <div className="pointer-events-none absolute inset-0 min-h-[620px]">
+          <img src={photos.sectionServices} alt="Background abstract design and optimization" className="h-full w-full object-cover opacity-75" />
+          <div className="absolute inset-0 bg-gradient-to-br from-white/90 via-white/80 to-white/95" />
+        </div>
+
+        <div className="relative mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
+            <div className="rounded-[32px] border border-white/70 bg-white/95 p-10 shadow-[0_20px_60px_rgba(15,23,42,0.08)] backdrop-blur-xl">
+              <p className="text-[12px] font-bold uppercase tracking-[0.24em] text-[#ff7a1a]">Core services</p>
+              <h2 className="mt-4 text-4xl font-semibold leading-tight text-[#101827] sm:text-5xl">
+                Work that blends strong strategy with polished execution
+              </h2>
+              <p className="mt-6 max-w-xl text-base leading-8 text-black/60">
+                We deliver digital products that feel calm, credible, and easy to use — from early concept to launch and ongoing improvement.
+              </p>
+
+            </div>
+
+            <div className="grid gap-5 sm:grid-cols-2">
+              {serviceCards.map((card) => (
+                <article key={card.title} className="rounded-[26px] border border-black/10 bg-white p-6 shadow-[0_18px_45px_rgba(0,0,0,0.06)] transition hover:-translate-y-1">
+                  <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-orange-100 text-[#ff7a1a]">
+                    <card.icon size={24} />
+                  </div>
+                  <h3 className="text-xl font-semibold text-[#101827]">{card.title}</h3>
+                  <p className="mt-4 text-sm leading-7 text-[#475569]">{card.description}</p>
+                  <a href="/services" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#ff7a1a]">
+                    Explore
+                    <ArrowRight size={16} />
+                  </a>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-16 sm:py-20">
+        <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+            <div>
+              <p className="text-[12px] font-bold uppercase tracking-[0.24em] text-[#ff7a1a]">Impact</p>
+              <h2 className="mt-4 text-4xl font-semibold leading-tight text-[#101827] sm:text-5xl">
+                Digital products with measurable returns
+              </h2>
+              <p className="mt-6 max-w-xl text-base leading-8 text-black/60">
+                We combine user-centered design with dependable engineering so you can launch confidently and keep improving.
+              </p>
+
+            </div>
+
+            <div className="rounded-[28px] bg-white p-6 shadow-[0_18px_40px_rgba(0,0,0,0.08)]">
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div className="overflow-hidden rounded-[24px] bg-white">
+                  <img src={photos.optimization} alt="Optimization dashboard" className="h-full w-full object-cover" />
+                </div>
+                <div className="overflow-hidden rounded-[24px] bg-white">
+                  <img src={photos.productGrowth} alt="Growth planning" className="h-full w-full object-cover" />
                 </div>
               </div>
             </div>
@@ -240,99 +197,32 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
-      <section className="bg-[#f6f8fb] py-8">
+      <section className="bg-white py-16 sm:py-20">
         <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
-          <div className="relative overflow-hidden rounded-[28px] border border-[#d9e1ea] p-6 sm:p-8 lg:p-10">
-            <img src={photos.planning} alt="Team planning a digital product roadmap" className="absolute inset-0 h-full w-full object-cover" />
-            <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(16,29,45,0.7),rgba(16,29,45,0.28),rgba(255,122,26,0.22))]" />
-            <div className="relative flex min-h-[260px] items-center justify-center">
-              <button className="flex h-20 w-20 items-center justify-center rounded-full bg-white text-[#ff7a1a] shadow-[0_18px_40px_rgba(16,29,45,0.16)] transition hover:scale-105">
-                <PlayCircle size={32} />
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-white py-16">
-        <div className="mx-auto max-w-[1240px] px-4 py-16 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#ff7a1a]">What we're offering</p>
-            <h2 className="mx-auto mt-4 max-w-[620px] text-4xl font-semibold leading-tight text-[#101d2d] sm:text-5xl">
-              Digital services that look polished and feel welcoming
-            </h2>
-          </div>
-
-          <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-            {serviceCards.map(card => (
-              <article key={card.title} className="overflow-hidden rounded-[26px] border border-[#dce3eb] bg-white shadow-[0_18px_50px_rgba(13,31,48,0.1)]">
-                <div className="h-52 overflow-hidden">
-                  <img src={card.image} alt={card.title} className="h-full w-full object-cover" />
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center justify-between">
-                    <div className="rounded-2xl bg-[#fff1e7] p-3">
-                      <card.icon size={22} className="text-[#ff7a1a]" />
-                    </div>
-                    <span className="rounded-full bg-[#ff7a1a] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-white">
-                      Service
-                    </span>
-                  </div>
-                  <div className="mt-6">
-                    <h3 className="text-2xl font-semibold text-[#101d2d]">{card.title}</h3>
-                    <p className="mt-3 max-w-sm text-sm leading-7 text-[#617080]">
-                      {card.description}
-                    </p>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-          {/*
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 center">
-            {metrics.map(metric => (
-              <article key={metric.label} className="rounded-[26px] border border-[#dde4ec] bg-[#fbfcfd] px-6 py-8 text-center center">
-                <div className="mx-auto flex h-28 w-28 items-center justify-center rounded-full border border-[#cad4df] text-4xl font-semibold text-[#ff7a1a]">
-                  {metric.value}
-                </div>
-                <p className="mt-5 text-sm font-medium uppercase tracking-[0.18em] text-[#5f6d7d]">{metric.label}</p>
-              </article>
-            ))}
-          </div>
-          */}
-        </div>
-      </section>
-
-      <section className="border-y border-[#dce3eb] bg-[#f6f8fb] py-16">
-        <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
             <div>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#ff7a1a]">Expert team</p>
-              <h2 className="mt-4 text-4xl font-semibold leading-tight text-[#101d2d] sm:text-5xl">
-                A team that makes digital work feel more human
+              <p className="text-[12px] font-bold uppercase tracking-[0.24em] text-[#ff7a1a]">Team</p>
+              <h2 className="mt-4 text-4xl font-semibold leading-tight text-[#101827] sm:text-5xl">
+                A focused team anchored in strategy and craft
               </h2>
-              <p className="mt-5 max-w-[460px] text-base leading-8 text-[#617080]">
-                Our consultants, designers, and developers combine technical execution with interface thinking so the end result is effective without feeling sterile.
+              <p className="mt-6 max-w-xl text-base leading-8 text-black/60">
+                We stay deliberately small so every project gets senior attention and every decision stays aligned with your business goals.
               </p>
-              <a href="/contact" className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#101d2d] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#16283c]">
-                Book your consultation
-                <ArrowRight size={16} />
-              </a>
             </div>
 
             <div className="grid gap-5 sm:grid-cols-3">
               {team.map((member) => (
-                <article key={member.name} className="overflow-hidden rounded-[24px] border border-[#dce3eb] bg-white shadow-[0_14px_40px_rgba(17,36,57,0.08)]">
-                  <div className="h-52 overflow-hidden">
+                <article key={member.name} className="overflow-hidden rounded-[24px] border border-black/10 bg-white shadow-[0_14px_40px_rgba(0,0,0,0.08)]">
+                  <div className="h-56 overflow-hidden">
                     <img
                       src={member.image}
                       alt={member.name}
                       className="h-full w-full object-cover"
                     />
                   </div>
-                  <div className="p-5">
-                    <h3 className="text-xl font-semibold text-[#101d2d]">{member.name}</h3>
-                    <p className="mt-2 text-sm uppercase tracking-[0.16em] text-[#ff7a1a]">{member.role}</p>
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold text-[#101827]">{member.name}</h3>
+                    <p className="mt-3 text-sm uppercase tracking-[0.16em] text-[#ff7a1a]">{member.role}</p>
                   </div>
                 </article>
               ))}
