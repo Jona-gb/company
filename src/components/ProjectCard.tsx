@@ -20,7 +20,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   link,
 }) => {
   return (
-    <article className="group overflow-hidden rounded-lg border border-[#ece8e2] bg-white shadow-[0_18px_45px_rgba(20,20,20,0.05)] transition hover:-translate-y-1 hover:border-[#ded8cf]">
+    <article className="group overflow-hidden rounded-lg border border-black/10 bg-white shadow-[0_18px_45px_rgba(20,20,20,0.05)] transition hover:-translate-y-1 hover:border-black/20">
       <div className="relative h-56 overflow-hidden bg-white">
         <img
           src={image}
@@ -31,7 +31,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
 
       <div className="p-6">
         <div className="mb-4 flex items-center justify-between gap-3">
-          <span className="rounded-md bg-orange-50 px-3 py-1 text-xs font-bold uppercase tracking-[0.12em] text-orange-700">
+          <span className="rounded-md bg-accent-50 px-3 py-1 text-xs font-bold uppercase tracking-[0.12em] text-accent">
             {category}
           </span>
           {link && (
@@ -39,7 +39,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
               href={link}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex h-9 w-9 items-center justify-center rounded-md border border-[#ece8e2] text-black transition hover:border-orange-600 hover:text-orange-600"
+              className="flex h-9 w-9 items-center justify-center rounded-md border border-black/10 text-black transition hover:border-accent hover:text-accent"
               aria-label={`Open ${title}`}
             >
               <ArrowUpRight size={17} />

@@ -16,8 +16,8 @@
   body {
     margin: 0;
     min-width: 320px;
-    background: #ffffff;
-    color: #111111;
+    background: white;
+    color: black;
     font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   }
 
@@ -25,20 +25,39 @@
     color: inherit;
     text-decoration: none;
   }
+
+  :root {
+    --color-bg: white;
+    --color-text: #111111;
+    --color-accent: #ff7a1a; /* brand orange */
+    --color-accent-50: #fff6f0;
+    --border-weak: rgba(0,0,0,0.06);
+  }
 }
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center justify-center rounded-md bg-black px-8 py-4 text-base font-semibold text-white shadow-sm transition duration-200 ease-in-out transform hover:scale-105 hover:bg-[#ff7a1a] hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff7a1a];
+    display: inline-flex; align-items: center; justify-content: center; border-radius: .375rem; background: black; padding: .75rem 2rem; font-weight: 600; font-size: 1rem; color: white; box-shadow: 0 1px 2px rgba(0,0,0,0.04); transition: transform .2s ease, background .2s ease; transform-origin: center;
   }
 
+  .btn-primary:hover { transform: scale(1.05); background: var(--color-accent); box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
+
   .btn-secondary {
-    @apply inline-flex items-center justify-center rounded-md border-2 border-[#ff7a1a] bg-white px-8 py-4 text-base font-semibold text-black shadow-sm transition duration-200 ease-in-out transform hover:scale-105 hover:bg-[#ff7a1a] hover:text-white hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff7a1a];
+    display: inline-flex; align-items: center; justify-content: center; border-radius: .375rem; border: 2px solid var(--color-accent); background: white; padding: .75rem 2rem; font-weight: 600; font-size: 1rem; color: black; box-shadow: 0 1px 2px rgba(0,0,0,0.04); transition: transform .2s ease, background .2s ease, color .2s ease;
   }
+
+  .btn-secondary:hover { transform: scale(1.05); background: var(--color-accent); color: white; box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
 
   .btn-dark {
     @apply inline-flex items-center justify-center rounded-md border border-white/20 bg-white/5 px-6 py-3 text-sm font-bold text-white transition hover:bg-white/10;
   }
+
+  /* small utility helpers for theme */
+  .text-accent { color: var(--color-accent); }
+  .bg-accent { background: var(--color-accent); }
+  .border-accent { border-color: var(--color-accent); }
+  .bg-accent-50 { background: var(--color-accent-50); }
+  .border-weak { border-color: var(--border-weak); }
 
   .section-title {
     font-family: 'Sora', 'Manrope', sans-serif;
@@ -47,5 +66,19 @@
   .font-serif {
     font-family: 'Sora', 'Manrope', sans-serif;
   }
+
+  /* Map common Tailwind orange utilities to brand variables for consistency */
+  .text-orange-600 { color: var(--color-accent) !important; }
+  .text-orange-700 { color: var(--color-accent) !important; }
+  .text-orange-500 { color: var(--color-accent) !important; }
+  .bg-orange-50 { background: var(--color-accent-50) !important; }
+  .bg-orange-100 { background: var(--color-accent-50) !important; }
+  .bg-orange-200 { background: var(--color-accent-50) !important; }
+  .border-orange-200 { border-color: var(--color-accent) !important; }
+  .border-orange-300 { border-color: var(--color-accent) !important; }
+  .hover\:bg-orange-600:hover { background: var(--color-accent) !important; }
+  .hover\:bg-orange-500:hover { background: var(--color-accent) !important; }
+  .hover\:text-orange-600:hover { color: var(--color-accent) !important; }
+  .hover\:border-orange-600:hover { border-color: var(--color-accent) !important; }
 }
 

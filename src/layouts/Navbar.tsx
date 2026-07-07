@@ -31,8 +31,8 @@ export const Navbar: React.FC = () => {
               className={({ isActive }) =>
                 `relative py-7 text-sm font-bold transition ${
                   isActive
-                    ? 'text-orange-500 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-orange-500'
-                    : 'text-white/70 hover:text-orange-300'
+                    ? 'text-accent after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-accent'
+                    : 'text-white/70 hover:text-accent'
                 }`
               }
             >
@@ -42,7 +42,7 @@ export const Navbar: React.FC = () => {
         </div>
 
         <div className="hidden items-center gap-4 md:flex">
-          <Link to="/contact" className="inline-flex items-center gap-3 rounded-md bg-black px-5 py-3 text-sm font-bold text-white transition hover:bg-orange-600">
+          <Link to="/contact" className="inline-flex items-center gap-3 rounded-md bg-black px-5 py-3 text-sm font-bold text-white transition hover:bg-accent">
             Let&apos;s Talk
             <ArrowRight size={16} />
           </Link>
@@ -50,7 +50,7 @@ export const Navbar: React.FC = () => {
 
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="flex h-11 w-11 items-center justify-center rounded-md border border-white/20 text-white transition hover:border-orange-500 hover:text-orange-300 md:hidden"
+          className="flex h-11 w-11 items-center justify-center rounded-md border border-white/20 text-white transition hover:border-accent hover:text-accent md:hidden"
           aria-label="Toggle navigation"
         >
           {isOpen ? <X size={22} /> : <Menu size={22} />}

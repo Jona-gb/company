@@ -19,14 +19,14 @@ export const Hero: React.FC<HeroProps> = ({
     <section className="relative overflow-hidden border-b border-black/10 bg-white">
       {backgroundImage && (
         <div className="pointer-events-none absolute inset-0">
-          <img src={backgroundImage} alt="" className="h-full w-full object-cover opacity-80 brightness-90" />
-          <div className="absolute inset-0 bg-white/85 backdrop-blur-xl" />
+          <img src={backgroundImage} alt="" className="h-full w-full object-cover opacity-100 brightness-100" />
+          <div className="absolute inset-0 bg-white/0 backdrop-blur-xl" />
         </div>
       )}
       <div className="relative z-10 mx-auto max-w-[1240px] px-5 py-16 min-h-[420px] sm:px-8 lg:px-12 lg:py-20">
         <div className="grid gap-10 lg:grid-cols-[0.85fr_0.45fr] lg:items-end">
           <div>
-            <p className="text-[12px] font-bold uppercase tracking-[0.18em] text-orange-600">{subtitle}</p>
+            <p className="text-[12px] font-bold uppercase tracking-[0.18em] text-accent">{subtitle}</p>
             <h1 className="mt-5 max-w-[780px] text-5xl font-extrabold leading-[1.02] tracking-[-0.035em] text-black sm:text-6xl">
               {title}
             </h1>
@@ -41,11 +41,11 @@ export const Hero: React.FC<HeroProps> = ({
               Share your goals and we will help shape the next practical step.
             </p>
             <div className="mt-5 flex gap-3">
-              <Link to="/contact" className="inline-flex items-center gap-2 rounded-md bg-black px-4 py-3 text-sm font-bold text-white transition hover:bg-orange-600">
+              <Link to="/contact" className="inline-flex items-center gap-2 rounded-md bg-black px-4 py-3 text-sm font-bold text-white transition hover:bg-accent">
                 Start
                 <ArrowRight size={16} />
               </Link>
-              <Link to="/portfolio" className="inline-flex items-center gap-2 rounded-md border border-[#ded8cf] px-4 py-3 text-sm font-bold text-black transition hover:border-black">
+              <Link to="/portfolio" className="inline-flex items-center gap-2 rounded-md border border-black/10 px-4 py-3 text-sm font-bold text-black transition hover:border-black">
                 Work
               </Link>
             </div>

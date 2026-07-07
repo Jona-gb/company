@@ -39,13 +39,13 @@ const team = [
 export const HomePage: React.FC = () => {
   return (
     <MainLayout>
-      <section className="bg-white border-b border-[#e7ecf1]">
-        <div className="mx-auto flex flex-col gap-4 px-4 py-4 text-[11px] font-semibold uppercase tracking-[0.24em] text-[#6b7887] sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+      <section className="bg-white border-b border-black/5">
+        <div className="mx-auto flex flex-col gap-4 px-4 py-4 text-[11px] font-semibold uppercase tracking-[0.24em] text-black/60 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center gap-4">
             <span>Web apps</span>
-            <span className="hidden h-1 w-1 rounded-full bg-[#ff7a1a] sm:inline-block" />
+            <span className="hidden h-1 w-1 rounded-full bg-accent sm:inline-block" />
             <span>Mobile products</span>
-            <span className="hidden h-1 w-1 rounded-full bg-[#ff7a1a] sm:inline-block" />
+            <span className="hidden h-1 w-1 rounded-full bg-accent sm:inline-block" />
             <span>UX systems</span>
           </div>
           <div className="flex flex-wrap items-center gap-4">
@@ -58,8 +58,8 @@ export const HomePage: React.FC = () => {
       <section className="bg-slate-50 py-12 sm:py-14">
         <div className="mx-auto grid max-w-[1240px] gap-10 px-4 sm:px-6 lg:grid-cols-[minmax(380px,520px)_1fr] lg:items-center lg:px-12">
           <div className="flex flex-col justify-center lg:min-h-[560px] lg:max-w-[520px]">
-            <p className="text-[12px] font-bold uppercase tracking-[0.24em] text-[#ff7a1a]">Digital growth for ambitious brands</p>
-            <h1 className="mt-4 max-w-3xl text-5xl font-extrabold tracking-[-0.04em] text-[#101827] sm:mt-5 sm:text-6xl">
+            <p className="text-[12px] font-bold uppercase tracking-[0.24em] text-accent">Digital growth for ambitious brands</p>
+            <h1 className="mt-4 max-w-3xl text-5xl font-extrabold tracking-[-0.04em] text-black sm:mt-5 sm:text-6xl">
               Build elegant web and mobile experiences that feel trusted and easy to use.
             </h1>
             <p className="mt-4 max-w-2xl text-lg leading-7 text-black/70 sm:mt-6 sm:text-xl">
@@ -84,7 +84,7 @@ export const HomePage: React.FC = () => {
 
           <div className="relative w-full h-[420px] sm:h-[500px] lg:h-[520px] overflow-hidden rounded-[32px] bg-black shadow-[0_28px_80px_rgba(0,0,0,0.18)]">
             <img src={photos.collaboration} alt="Team collaborating on product design" className="h-full w-full object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-br from-black/95 via-black/70 to-black/0" />
+            <div className="absolute inset-0 bg-gradient-to-br from-black/0 via-black/0 to-black/0" />
             <div className="relative flex h-full items-end p-8">
               <div className="rounded-3xl border border-white/20 bg-black/50 p-6 backdrop-blur-xl text-white shadow-[0_14px_40px_rgba(0,0,0,0.25)]">
                 <p className="text-sm uppercase tracking-[0.22em] text-white/90">Feature launch support</p>
@@ -116,12 +116,12 @@ export const HomePage: React.FC = () => {
               },
             ].map((item) => (
               <article key={item.title} className="group overflow-hidden rounded-[28px] border border-black/10 bg-white p-8 transition hover:-translate-y-1 hover:shadow-xl">
-                <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-orange-100 text-[#ff7a1a]">
+                <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-accent-50 text-accent">
                   <item.icon size={24} />
                 </div>
-                <h2 className="mt-6 text-2xl font-semibold text-[#101827]">{item.title}</h2>
+                <h2 className="mt-6 text-2xl font-semibold text-black">{item.title}</h2>
                 <p className="mt-4 text-sm leading-7 text-black/60">{item.description}</p>
-                <a href="/services" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#ff7a1a]">
+                <a href="/services" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-accent">
                   Learn how
                   <ArrowRight size={16} />
                 </a>
@@ -133,15 +133,15 @@ export const HomePage: React.FC = () => {
 
       <section className="relative overflow-hidden bg-white py-16 sm:py-20">
         <div className="pointer-events-none absolute inset-0 min-h-[620px]">
-          <img src={photos.sectionServices} alt="Background abstract design and optimization" className="h-full w-full object-cover opacity-75" />
-          <div className="absolute inset-0 bg-gradient-to-br from-white/90 via-white/80 to-white/95" />
+          <img src={photos.sectionServices} alt="Background abstract design and optimization" className="h-full w-full object-cover opacity-100" />
+          <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-white/0 to-black/90" />
         </div>
 
         <div className="relative mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
             <div className="rounded-[32px] border border-white/70 bg-white/95 p-10 shadow-[0_20px_60px_rgba(15,23,42,0.08)] backdrop-blur-xl">
-              <p className="text-[12px] font-bold uppercase tracking-[0.24em] text-[#ff7a1a]">Core services</p>
-              <h2 className="mt-4 text-4xl font-semibold leading-tight text-[#101827] sm:text-5xl">
+              <p className="text-[12px] font-bold uppercase tracking-[0.24em] text-accent">Core services</p>
+              <h2 className="mt-4 text-4xl font-semibold leading-tight text-black sm:text-5xl">
                 Work that blends strong strategy with polished execution
               </h2>
               <p className="mt-6 max-w-xl text-base leading-8 text-black/60">
@@ -153,12 +153,12 @@ export const HomePage: React.FC = () => {
             <div className="grid gap-5 sm:grid-cols-2">
               {serviceCards.map((card) => (
                 <article key={card.title} className="rounded-[26px] border border-black/10 bg-white p-6 shadow-[0_18px_45px_rgba(0,0,0,0.06)] transition hover:-translate-y-1">
-                  <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-orange-100 text-[#ff7a1a]">
+                  <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-accent-50 text-accent">
                     <card.icon size={24} />
                   </div>
-                  <h3 className="text-xl font-semibold text-[#101827]">{card.title}</h3>
-                  <p className="mt-4 text-sm leading-7 text-[#475569]">{card.description}</p>
-                  <a href="/services" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#ff7a1a]">
+                  <h3 className="text-xl font-semibold text-black">{card.title}</h3>
+                  <p className="mt-4 text-sm leading-7 text-black/60">{card.description}</p>
+                  <a href="/services" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-accent">
                     Explore
                     <ArrowRight size={16} />
                   </a>
@@ -173,8 +173,8 @@ export const HomePage: React.FC = () => {
         <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
             <div>
-              <p className="text-[12px] font-bold uppercase tracking-[0.24em] text-[#ff7a1a]">Impact</p>
-              <h2 className="mt-4 text-4xl font-semibold leading-tight text-[#101827] sm:text-5xl">
+              <p className="text-[12px] font-bold uppercase tracking-[0.24em] text-accent">Impact</p>
+              <h2 className="mt-4 text-4xl font-semibold leading-tight text-black sm:text-5xl">
                 Digital products with measurable returns
               </h2>
               <p className="mt-6 max-w-xl text-base leading-8 text-black/60">
@@ -201,8 +201,8 @@ export const HomePage: React.FC = () => {
         <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
             <div>
-              <p className="text-[12px] font-bold uppercase tracking-[0.24em] text-[#ff7a1a]">Team</p>
-              <h2 className="mt-4 text-4xl font-semibold leading-tight text-[#101827] sm:text-5xl">
+              <p className="text-[12px] font-bold uppercase tracking-[0.24em] text-accent">Team</p>
+              <h2 className="mt-4 text-4xl font-semibold leading-tight text-black sm:text-5xl">
                 A focused team anchored in strategy and craft
               </h2>
               <p className="mt-6 max-w-xl text-base leading-8 text-black/60">
@@ -221,8 +221,8 @@ export const HomePage: React.FC = () => {
                     />
                   </div>
                   <div className="p-6">
-                    <h3 className="text-xl font-semibold text-[#101827]">{member.name}</h3>
-                    <p className="mt-3 text-sm uppercase tracking-[0.16em] text-[#ff7a1a]">{member.role}</p>
+                    <h3 className="text-xl font-semibold text-black">{member.name}</h3>
+                    <p className="mt-3 text-sm uppercase tracking-[0.16em] text-accent">{member.role}</p>
                   </div>
                 </article>
               ))}

@@ -22,7 +22,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
     <article
       className={`overflow-hidden rounded-lg border bg-white transition ${
         highlighted
-          ? 'border-orange-300 shadow-[0_20px_55px_rgba(234,88,12,0.12)]'
+          ? 'border-accent shadow-[0_20px_55px_rgba(255,122,26,0.12)]'
           : 'border-black/10 shadow-[0_18px_45px_rgba(20,20,20,0.05)] hover:border-black/20'
       }`}
     >
@@ -31,7 +31,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
       )}
 
       <div className="p-6">
-        <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-md bg-orange-50 text-orange-600">
+        <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-md bg-accent-50 text-accent">
           <Icon size={22} />
         </div>
 
@@ -42,7 +42,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
           <ul className="mt-6 space-y-3">
             {features.slice(0, 5).map(feature => (
               <li key={feature} className="flex items-start gap-3 text-sm leading-6 text-black/68">
-                <CheckCircle2 size={17} className="mt-1 shrink-0 text-orange-600" />
+                <CheckCircle2 size={17} className="mt-1 shrink-0 text-accent" />
                 <span>{feature}</span>
               </li>
             ))}

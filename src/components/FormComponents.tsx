@@ -20,13 +20,13 @@ export const FormInput: React.FC<FormInputProps> = ({
   required = false,
   options,
 }) => {
-  const baseClasses = 'w-full rounded-md border border-[#ded8cf] bg-white px-4 py-3 text-sm text-black placeholder-black/35 outline-none transition focus:border-orange-600 focus:ring-4 focus:ring-orange-100'
+  const baseClasses = 'w-full rounded-md border border-black/10 bg-white px-4 py-3 text-sm text-black placeholder-black/35 outline-none transition focus:border-accent focus:ring-4 focus:ring-accent-50'
 
   return (
     <div>
       <label className="mb-2 block text-sm font-bold text-black">
         {label}
-        {required && <span className="ml-1 text-orange-600">*</span>}
+        {required && <span className="ml-1 text-accent">*</span>}
       </label>
       {type === 'textarea' ? (
         <textarea
@@ -74,9 +74,9 @@ export const SuccessMessage: React.FC<SuccessMessageProps> = ({
   details,
 }) => {
   return (
-    <div className="rounded-lg border border-[#ece8e2] bg-white p-8 text-center shadow-[0_18px_45px_rgba(20,20,20,0.06)]">
+    <div className="rounded-lg border border-black/10 bg-white p-8 text-center shadow-[0_18px_45px_rgba(20,20,20,0.06)]">
       <div className="mb-6 flex justify-center">
-        <div className="flex h-16 w-16 items-center justify-center rounded-full bg-orange-50 text-orange-600">
+        <div className="flex h-16 w-16 items-center justify-center rounded-full bg-accent-50 text-accent">
           <CheckCircle2 size={34} />
         </div>
       </div>
@@ -86,13 +86,13 @@ export const SuccessMessage: React.FC<SuccessMessageProps> = ({
         <div className="mx-auto mt-6 grid max-w-md gap-3 text-left">
           {details.map(detail => (
             <p key={detail} className="flex items-start gap-3 text-sm leading-6 text-black/68">
-              <CheckCircle2 size={17} className="mt-1 shrink-0 text-orange-600" />
+              <CheckCircle2 size={17} className="mt-1 shrink-0 text-accent" />
               {detail}
             </p>
           ))}
         </div>
       )}
-      <a href="/" className="mt-8 inline-flex items-center justify-center rounded-md bg-black px-6 py-3 text-sm font-bold text-white transition hover:bg-orange-600">
+      <a href="/" className="mt-8 inline-flex items-center justify-center rounded-md bg-black px-6 py-3 text-sm font-bold text-white transition hover:bg-accent">
         Back to Home
       </a>
     </div>

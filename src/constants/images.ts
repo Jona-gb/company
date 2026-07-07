@@ -8,7 +8,7 @@ export const imageUrls = {
     mobileApps: 'https://images.unsplash.com/photo-1512941691920-25bef266e0a9?auto=format&fit=crop&w=900&h=650&q=80',
     mobileUx: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=900&h=650&q=80',
     productGrowth: 'https://i.pinimg.com/736x/56/5c/20/565c20956cd3c88a8efb17dcb25c69dc.jpg',
-    sectionServices: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&h=900&q=80',
+    sectionServices: 'https://i.pinimg.com/1200x/f4/80/71/f480716d003bf3ac83cc3571beb1bcf4.jpg',
     uiDesign: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=900&h=650&q=80',
     uxDesign: 'https://images.unsplash.com/photo-1561550355-ba58d806f76d?auto=format&fit=crop&w=900&h=650&q=80',
     accessibility: 'https://images.unsplash.com/photo-1434030216411-0b793313e4de?auto=format&fit=crop&w=900&h=650&q=80',

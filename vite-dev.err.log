@@ -1,2 +1,4 @@
 [2m10:26:00 pm[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to load url /src/pages/HomePage.tsx (resolved id: C:/Users/JOE/Documents/COMPANY/STARTUP_WEB/agency-site/src/pages/HomePage.tsx) in C:/Users/JOE/Documents/COMPANY/STARTUP_WEB/agency-site/src/App.tsx. Does the file exist?
 [2m10:49:40 pm[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to load url /src/pages/ContactPage.tsx (resolved id: C:/Users/JOE/Documents/COMPANY/STARTUP_WEB/agency-site/src/pages/ContactPage.tsx) in C:/Users/JOE/Documents/COMPANY/STARTUP_WEB/agency-site/src/App.tsx. Does the file exist?
+
+A PostCSS plugin did not pass the `from` option to `postcss.parse`. This may cause imported assets to be incorrectly transformed. If you've recently added a PostCSS plugin that raised this warning, please contact the package author to fix the issue.

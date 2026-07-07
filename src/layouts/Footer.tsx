@@ -13,7 +13,7 @@ export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="border-t border-[#eeeeee] bg-white text-black">
+    <footer className="border-t border-black/10 bg-white text-black">
       <div className="mx-auto max-w-[1240px] px-5 py-10 sm:px-8 lg:px-12">
         <div className="grid gap-8 md:grid-cols-[1.2fr_0.8fr_1fr]">
           <div>
@@ -33,7 +33,7 @@ export const Footer: React.FC = () => {
             <h3 className="text-sm font-extrabold text-black">Company</h3>
             <div className="mt-4 grid gap-2">
               {links.map(link => (
-                <Link key={link.label} to={link.href} className="text-sm text-black/62 transition hover:text-orange-600">
+                <Link key={link.label} to={link.href} className="text-sm text-black/62 transition hover:text-accent">
                   {link.label}
                 </Link>
               ))}
@@ -43,23 +43,23 @@ export const Footer: React.FC = () => {
           <div>
             <h3 className="text-sm font-extrabold text-black">Contact</h3>
             <div className="mt-4 grid gap-3 text-sm text-black/62">
-              <a href="tel:+233203530777" className="flex items-center gap-3 transition hover:text-orange-600">
-                <Phone size={16} className="text-orange-600" />
+              <a href="tel:+233203530777" className="flex items-center gap-3 transition hover:text-accent">
+                <Phone size={16} className="text-accent" />
                 +233 20 353 0777
               </a>
-              <a href="mailto:huzzghana@gmail.com" className="flex items-center gap-3 transition hover:text-orange-600">
-                <Mail size={16} className="text-orange-600" />
+              <a href="mailto:huzzghana@gmail.com" className="flex items-center gap-3 transition hover:text-accent">
+                <Mail size={16} className="text-accent" />
                 huzzghana@gmail.com
               </a>
               <p className="flex items-center gap-3">
-                <MapPin size={16} className="text-orange-600" />
+                <MapPin size={16} className="text-accent" />
                 Accra, Ghana
               </p>
             </div>
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-3 border-t border-[#eeeeee] pt-6 text-sm text-black/50 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-10 flex flex-col gap-3 border-t border-black/10 pt-6 text-sm text-black/50 sm:flex-row sm:items-center sm:justify-between">
           <p>&copy; {currentYear} Huzz Solutions. All rights reserved.</p>
           <p>Designed for clear digital growth.</p>
         </div>

@@ -51,7 +51,7 @@ const timelines = [
 export const ContactPage: React.FC = () => {
   const [step, setStep] = useState(1)
   const [formData, setFormData] = useState<FormData>({
-    fullName: '',
+      fullName: '',
     company: '',
     email: '',
     phone: '',
@@ -159,10 +159,10 @@ export const ContactPage: React.FC = () => {
         backgroundImage={imageUrls.portfolio.hero}
       />
 
-      <section className="bg-white py-16">
+        <section className="bg-white py-16">
         <div className="mx-auto grid max-w-[1240px] gap-10 px-5 sm:px-8 lg:grid-cols-[0.45fr_0.75fr] lg:px-12">
-          <aside className="rounded-lg border border-[#ece8e2] bg-white p-6 shadow-[0_18px_45px_rgba(20,20,20,0.05)] lg:sticky lg:top-28 lg:h-fit">
-            <p className="text-[12px] font-bold uppercase tracking-[0.18em] text-orange-600">Contact</p>
+          <aside className="rounded-lg border border-black/10 bg-white p-6 shadow-[0_18px_45px_rgba(20,20,20,0.05)] lg:sticky lg:top-28 lg:h-fit">
+            <p className="text-[12px] font-bold uppercase tracking-[0.18em] text-accent">Contact</p>
             <h2 className="mt-3 text-2xl font-extrabold tracking-[-0.02em] text-black">
               Project details help us respond well.
             </h2>
@@ -170,13 +170,13 @@ export const ContactPage: React.FC = () => {
               Share the essentials and we will follow up with a clear next step. You can also email or call directly.
             </p>
             <div className="mt-6 grid gap-3 text-sm text-black/68">
-              <a href="mailto:huzzghana@gmail.com" className="font-semibold transition hover:text-orange-600">huzzghana@gmail.com</a>
-              <a href="tel:+233203530777" className="font-semibold transition hover:text-orange-600">+233 20 353 0777</a>
+              <a href="mailto:huzzghana@gmail.com" className="font-semibold transition hover:text-accent">huzzghana@gmail.com</a>
+              <a href="tel:+233203530777" className="font-semibold transition hover:text-accent">+233 20 353 0777</a>
             </div>
           </aside>
 
           <div>
-            <div className="mb-8 rounded-lg border border-[#ece8e2] bg-white p-5">
+            <div className="mb-8 rounded-lg border border-black/10 bg-white p-5">
               <div className="grid gap-3 sm:grid-cols-3">
                 {['Basic Info', 'Project Details', 'Message'].map((label, index) => {
                   const stepNumber = index + 1
@@ -184,9 +184,9 @@ export const ContactPage: React.FC = () => {
                   const complete = step > stepNumber
 
                   return (
-                    <div key={label} className={`rounded-md border p-4 ${active ? 'border-orange-300 bg-orange-50' : 'border-[#ece8e2] bg-white'}`}>
+                    <div key={label} className={`rounded-md border p-4 ${active ? 'border-accent bg-accent-50' : 'border-black/10 bg-white'}`}>
                       <div className="flex items-center gap-3">
-                        <span className={`flex h-8 w-8 items-center justify-center rounded-full text-sm font-extrabold ${active || complete ? 'bg-orange-600 text-white' : 'bg-[#f3eee8] text-black/50'}`}>
+                        <span className={`flex h-8 w-8 items-center justify-center rounded-full text-sm font-extrabold ${active || complete ? 'bg-accent text-white' : 'bg-black/5 text-black/50'}`}>
                           {complete ? <CheckCircle2 size={17} /> : stepNumber}
                         </span>
                         <span className="text-sm font-bold text-black">{label}</span>
@@ -197,7 +197,7 @@ export const ContactPage: React.FC = () => {
               </div>
             </div>
 
-            <form onSubmit={handleSubmit} className="rounded-lg border border-[#ece8e2] bg-white p-6 shadow-[0_18px_45px_rgba(20,20,20,0.06)] sm:p-8">
+            <form onSubmit={handleSubmit} className="rounded-lg border border-black/10 bg-white p-6 shadow-[0_18px_45px_rgba(20,20,20,0.06)] sm:p-8">
               {error && (
                 <div className="mb-6 flex gap-3 rounded-md border border-red-200 bg-red-50 p-4">
                   <AlertCircle className="shrink-0 text-red-600" size={20} />
@@ -213,7 +213,7 @@ export const ContactPage: React.FC = () => {
                   <FormInput label="Email Address" type="email" placeholder="john@example.com" value={formData.email} onChange={v => updateField('email', v)} required />
                   <FormInput label="Phone Number" type="tel" placeholder="+233 20 000 0000" value={formData.phone} onChange={v => updateField('phone', v)} />
 
-                  <button type="button" onClick={handleNext} disabled={!isStep1Valid} className="mt-8 flex w-full items-center justify-center gap-2 rounded-md bg-black px-6 py-3 text-sm font-bold text-white transition hover:bg-orange-600 disabled:cursor-not-allowed disabled:opacity-40">
+                  <button type="button" onClick={handleNext} disabled={!isStep1Valid} className="mt-8 flex w-full items-center justify-center gap-2 rounded-md bg-black px-6 py-3 text-sm font-bold text-white transition hover:bg-accent disabled:cursor-not-allowed disabled:opacity-40">
                     Continue
                     <Send size={18} />
                   </button>
@@ -227,11 +227,11 @@ export const ContactPage: React.FC = () => {
                   <FormInput label="Estimated Budget" type="select" value={formData.budget} onChange={v => updateField('budget', v)} required options={budgetRanges} />
                   <FormInput label="Project Timeline" type="select" value={formData.timeline} onChange={v => updateField('timeline', v)} required options={timelines} />
 
-                  <div className="mt-8 flex gap-4 border-t border-[#ece8e2] pt-4">
-                    <button type="button" onClick={() => setStep(1)} className="flex-1 rounded-md border border-[#ded8cf] px-6 py-3 text-sm font-bold text-black transition hover:border-black">
+                  <div className="mt-8 flex gap-4 border-t border-black/10 pt-4">
+                    <button type="button" onClick={() => setStep(1)} className="flex-1 rounded-md border border-black/10 px-6 py-3 text-sm font-bold text-black transition hover:border-black">
                       Back
                     </button>
-                    <button type="button" onClick={handleNext} disabled={!isStep2Valid} className="flex flex-1 items-center justify-center gap-2 rounded-md bg-black px-6 py-3 text-sm font-bold text-white transition hover:bg-orange-600 disabled:cursor-not-allowed disabled:opacity-40">
+                    <button type="button" onClick={handleNext} disabled={!isStep2Valid} className="flex flex-1 items-center justify-center gap-2 rounded-md bg-black px-6 py-3 text-sm font-bold text-white transition hover:bg-accent disabled:cursor-not-allowed disabled:opacity-40">
                       Continue
                       <Send size={18} />
                     </button>
@@ -251,17 +251,17 @@ export const ContactPage: React.FC = () => {
                     required
                   />
 
-                  <div className="rounded-md border border-orange-200 bg-orange-50 p-4">
+                  <div className="rounded-md border border-accent bg-accent-50 p-4">
                     <p className="text-sm leading-6 text-black/68">
                       <span className="font-bold text-black">Tip:</span> The more details you provide, the better we can tailor our proposal to your needs.
                     </p>
                   </div>
 
-                  <div className="mt-8 flex gap-4 border-t border-[#ece8e2] pt-4">
-                    <button type="button" onClick={() => setStep(2)} className="flex-1 rounded-md border border-[#ded8cf] px-6 py-3 text-sm font-bold text-black transition hover:border-black disabled:opacity-40" disabled={loading}>
+                  <div className="mt-8 flex gap-4 border-t border-black/10 pt-4">
+                    <button type="button" onClick={() => setStep(2)} className="flex-1 rounded-md border border-black/10 px-6 py-3 text-sm font-bold text-black transition hover:border-black disabled:opacity-40" disabled={loading}>
                       Back
                     </button>
-                    <button type="submit" disabled={!isStep3Valid || loading} className="flex flex-1 items-center justify-center gap-2 rounded-md bg-black px-6 py-3 text-sm font-bold text-white transition hover:bg-orange-600 disabled:cursor-not-allowed disabled:opacity-40">
+                    <button type="submit" disabled={!isStep3Valid || loading} className="flex flex-1 items-center justify-center gap-2 rounded-md bg-black px-6 py-3 text-sm font-bold text-white transition hover:bg-accent disabled:cursor-not-allowed disabled:opacity-40">
                       {loading ? 'Sending...' : 'Submit Inquiry'}
                       <Send size={18} />
                     </button>
