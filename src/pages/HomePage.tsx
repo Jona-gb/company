@@ -80,9 +80,10 @@ export const HomePage: React.FC = () => {
 
           </div>
 
-          <div className="relative w-full h-[420px] sm:h-[500px] lg:h-[520px] overflow-hidden rounded-[32px] bg-black shadow-[0_28px_80px_rgba(0,0,0,0.18)]">
-            <div className="pointer-events-none absolute inset-0 rounded-[32px] bg-[radial-gradient(circle_at_center,_rgba(14,165,164,0.24),_rgba(14,165,164,0)_38%)] blur-3xl opacity-90" />
-            <div className="pointer-events-none absolute left-[-8%] top-[18%] hidden h-[240px] w-[240px] rounded-full bg-[radial-gradient(circle,_rgba(56,189,248,0.28),_transparent_72%)] blur-3xl opacity-90 lg:block" />
+          <div className="relative w-full h-[420px] sm:h-[500px] lg:h-[520px] overflow-hidden rounded-[32px] bg-black shadow-[0_28px_90px_rgba(0,0,0,0.22)]">
+            <div className="pointer-events-none absolute inset-0 rounded-[32px] bg-[radial-gradient(circle_at_center,_rgba(14,165,164,0.3),_rgba(14,165,164,0)_36%)] blur-3xl opacity-95" />
+            <div className="pointer-events-none absolute left-[-12%] top-[18%] hidden h-[260px] w-[260px] rounded-full bg-[radial-gradient(circle,_rgba(56,189,248,0.35),_transparent_68%)] blur-3xl opacity-100 lg:block" />
+            <div className="pointer-events-none absolute right-[-10%] bottom-[8%] hidden h-[180px] w-[180px] rounded-full bg-[radial-gradient(circle,_rgba(20,184,166,0.22),_transparent_70%)] blur-2xl opacity-95 lg:block" />
             <img src={photos.collaboration} alt="Team collaborating on product design" className="relative h-full w-full object-cover brightness-100" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
             <div className="relative flex h-full items-end p-8">
