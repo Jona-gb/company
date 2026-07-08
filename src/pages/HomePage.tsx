@@ -81,7 +81,9 @@ export const HomePage: React.FC = () => {
           </div>
 
           <div className="relative w-full h-[420px] sm:h-[500px] lg:h-[520px] overflow-hidden rounded-[32px] bg-black shadow-[0_28px_80px_rgba(0,0,0,0.18)]">
-            <img src={photos.collaboration} alt="Team collaborating on product design" className="h-full w-full object-cover brightness-90" />
+            <div className="pointer-events-none absolute inset-0 rounded-[32px] bg-[radial-gradient(circle_at_center,_rgba(14,165,164,0.24),_rgba(14,165,164,0)_38%)] blur-3xl opacity-90" />
+            <div className="pointer-events-none absolute left-[-8%] top-[18%] hidden h-[240px] w-[240px] rounded-full bg-[radial-gradient(circle,_rgba(56,189,248,0.28),_transparent_72%)] blur-3xl opacity-90 lg:block" />
+            <img src={photos.collaboration} alt="Team collaborating on product design" className="relative h-full w-full object-cover brightness-100" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
             <div className="relative flex h-full items-end p-8">
               <div className="rounded-3xl border border-white/15 bg-black/55 p-6 backdrop-blur-xl text-white shadow-[0_14px_40px_rgba(0,0,0,0.25)]">

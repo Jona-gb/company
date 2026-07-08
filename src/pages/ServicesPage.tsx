@@ -1,5 +1,6 @@
 import React from 'react'
-import { ArrowRight, BarChart3, Code2, Layers, MonitorSmartphone, Palette, RefreshCw, Shield, Smartphone, TrendingUp } from 'lucide-react'
+import { BarChart3, Code2, Layers, MonitorSmartphone, Palette, RefreshCw, Shield, Smartphone, TrendingUp } from 'lucide-react'
+import AccentPanel from '../components/AccentPanel'
 import { Hero } from '../components/Hero'
 import { ServiceCard } from '../components/ServiceCard'
 import { MainLayout } from '../layouts'
@@ -272,21 +273,13 @@ export const ServicesPage: React.FC = () => {
       </section>
 
       <section className="bg-slate-950 py-16">
-        <div className="mx-auto max-w-[960px] px-5 text-center sm:px-8 lg:px-12">
-          <div className="rounded-[40px] border border-white/10 bg-gradient-to-br from-teal-600 to-cyan-600 p-10 text-white shadow-[0_40px_100px_rgba(14,165,164,0.25)]">
-            <p className="text-sm uppercase tracking-[0.28em] text-teal-100">Ready to partner?</p>
-            <h2 className="mt-4 text-4xl font-extrabold tracking-[-0.04em] sm:text-5xl">
-              Build a standout digital product together.
-            </h2>
-            <p className="mt-5 max-w-2xl mx-auto text-lg leading-8 text-teal-100/90">
-              We help brands move faster with polished websites, apps, and design systems that customers trust.
-            </p>
-            <a href="/contact" className="mt-8 inline-flex items-center gap-3 rounded-full bg-white px-7 py-3 text-sm font-bold text-slate-950 transition hover:bg-slate-100">
-              Start a New Project
-              <ArrowRight size={18} />
-            </a>
-          </div>
-        </div>
+        <AccentPanel
+          eyebrow="Ready to partner?"
+          title={<>Build a standout digital product together.</>}
+          description={<>We help brands move faster with polished websites, apps, and design systems that customers trust.</>}
+          ctaText="Start a New Project"
+          href="/contact"
+        />
       </section>
     </MainLayout>
   )

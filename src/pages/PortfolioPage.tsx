@@ -2,7 +2,8 @@ import React, { useState, useMemo } from 'react'
 import { MainLayout } from '../layouts'
 import { Hero } from '../components/Hero'
 import { ProjectCard } from '../components/ProjectCard'
-import { ArrowRight, X } from 'lucide-react'
+import { X } from 'lucide-react'
+import AccentPanel from '../components/AccentPanel'
 import { imageUrls } from '../constants/images'
 
 export const PortfolioPage: React.FC = () => {
@@ -153,20 +154,14 @@ export const PortfolioPage: React.FC = () => {
         </div>
       </section>
 
-      <section className="bg-black py-16">
-        <div className="mx-auto max-w-[900px] px-5 text-center sm:px-8 lg:px-12">
-          <p className="mb-4 text-[12px] font-bold uppercase tracking-[0.18em] text-accent">Ready to start?</p>
-          <h2 className="text-3xl font-extrabold leading-tight tracking-[-0.02em] text-white sm:text-5xl">
-            Your project could be next.
-          </h2>
-          <p className="mx-auto mt-5 max-w-2xl text-teal-100 leading-8">
-            Let's collaborate to create a portfolio-worthy project that delivers real business results.
-          </p>
-          <a href="/contact" className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-bold text-slate-950 transition hover:bg-slate-100">
-            Start a New Project
-            <ArrowRight size={17} />
-          </a>
-        </div>
+      <section className="bg-slate-950 py-16">
+        <AccentPanel
+          eyebrow="Ready to start?"
+          title={<>Your project could be next.</>}
+          description={<>Let's collaborate to create a portfolio-worthy project that delivers real business results.</>}
+          ctaText="Start a New Project"
+          href="/contact"
+        />
       </section>
     </MainLayout>
   )
