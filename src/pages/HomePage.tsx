@@ -39,9 +39,9 @@ const team = [
 export const HomePage: React.FC = () => {
   return (
     <MainLayout>
-      <section className="bg-white border-b border-black/5">
-        <div className="mx-auto flex flex-col gap-4 px-4 py-4 text-[11px] font-semibold uppercase tracking-[0.24em] text-black/60 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
-          <div className="flex flex-wrap items-center gap-4">
+      <section className="bg-slate-950 border-b border-white/10">
+        <div className="mx-auto flex flex-col gap-4 px-4 py-4 text-[11px] font-semibold uppercase tracking-[0.24em] text-slate-300 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+          <div className="flex flex-wrap items-center gap-4 text-slate-300">
             <span>Web apps</span>
             <span className="hidden h-1 w-1 rounded-full bg-accent sm:inline-block" />
             <span>Mobile products</span>
@@ -49,45 +49,43 @@ export const HomePage: React.FC = () => {
             <span>UX systems</span>
           </div>
           <div className="flex flex-wrap items-center gap-4">
-            <a href="mailto:huzzghana@gmail.com" className="transition hover:text-black">huzzghana@gmail.com</a>
-            <a href="tel:+233203530777" className="transition hover:text-black">+233 203 530 777</a>
+            <a href="mailto:huzzghana@gmail.com" className="transition hover:text-white">huzzghana@gmail.com</a>
+            <a href="tel:+233203530777" className="transition hover:text-white">+233 203 530 777</a>
           </div>
         </div>
       </section>
 
-      <section className="bg-slate-50 py-12 sm:py-14">
-        <div className="mx-auto grid max-w-[1240px] gap-10 px-4 sm:px-6 lg:grid-cols-[minmax(380px,520px)_1fr] lg:items-center lg:px-12">
+      <section className="relative overflow-hidden bg-slate-950 py-16 sm:py-20">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(14,165,164,0.18),_transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(56,189,248,0.15),_transparent_30%)]" />
+        <div className="relative mx-auto grid max-w-[1240px] gap-10 px-4 sm:px-6 lg:grid-cols-[minmax(380px,520px)_1fr] lg:items-center lg:px-12">
           <div className="flex flex-col justify-center lg:min-h-[560px] lg:max-w-[520px]">
             <p className="text-[12px] font-bold uppercase tracking-[0.24em] text-accent">Digital growth for ambitious brands</p>
-            <h1 className="mt-4 max-w-3xl text-5xl font-extrabold tracking-[-0.04em] text-black sm:mt-5 sm:text-6xl">
+            <h1 className="mt-4 max-w-3xl text-5xl font-extrabold tracking-[-0.04em] text-white sm:mt-5 sm:text-6xl">
               Build elegant web and mobile experiences that feel trusted and easy to use.
             </h1>
-            <p className="mt-4 max-w-2xl text-lg leading-7 text-black/70 sm:mt-6 sm:text-xl">
+            <p className="mt-4 max-w-2xl text-lg leading-8 text-slate-200 sm:mt-6 sm:text-xl">
               We design, develop, and optimize digital products with attention to clarity, conversion, and long-term brand consistency.
             </p>
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <a href="/contact" className="btn-primary inline-flex items-center justify-center gap-2">
+              <a href="/contact" className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-bold text-white transition hover:bg-accent-600">
                 Start a project
                 <ArrowRight size={18} />
               </a>
-              <a href="/portfolio" className="btn-secondary inline-flex items-center justify-center gap-2">
+              <a href="/portfolio" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/10 px-6 py-3 text-sm font-bold text-white transition hover:border-accent hover:bg-white/15">
                 See our work
                 <ArrowRight size={18} />
               </a>
             </div>
 
-            <div className="mt-12 grid gap-4 sm:grid-cols-3">
-              
-            </div>
           </div>
 
           <div className="relative w-full h-[420px] sm:h-[500px] lg:h-[520px] overflow-hidden rounded-[32px] bg-black shadow-[0_28px_80px_rgba(0,0,0,0.18)]">
-            <img src={photos.collaboration} alt="Team collaborating on product design" className="h-full w-full object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-br from-black/0 via-black/0 to-black/0" />
+            <img src={photos.collaboration} alt="Team collaborating on product design" className="h-full w-full object-cover brightness-90" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
             <div className="relative flex h-full items-end p-8">
-              <div className="rounded-3xl border border-white/20 bg-black/50 p-6 backdrop-blur-xl text-white shadow-[0_14px_40px_rgba(0,0,0,0.25)]">
-                <p className="text-sm uppercase tracking-[0.22em] text-white/90">Feature launch support</p>
+              <div className="rounded-3xl border border-white/15 bg-black/55 p-6 backdrop-blur-xl text-white shadow-[0_14px_40px_rgba(0,0,0,0.25)]">
+                <p className="text-sm uppercase tracking-[0.22em] text-teal-200">Feature launch support</p>
                 <p className="mt-4 text-2xl font-semibold text-white drop-shadow-[0_1px_4px_rgba(0,0,0,0.45)]">Launch faster with product-ready design and development.</p>
               </div>
             </div>
@@ -95,7 +93,7 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
-      <section className="bg-white py-16 sm:py-20">
+      <section className="bg-slate-50 py-16 sm:py-20">
         <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-3">
             {[
@@ -116,11 +114,11 @@ export const HomePage: React.FC = () => {
               },
             ].map((item) => (
               <article key={item.title} className="group overflow-hidden rounded-[28px] border border-black/10 bg-white p-8 transition hover:-translate-y-1 hover:shadow-xl">
-                <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-accent-50 text-accent">
+                <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-accent-50 text-accent shadow-sm">
                   <item.icon size={24} />
                 </div>
-                <h2 className="mt-6 text-2xl font-semibold text-black">{item.title}</h2>
-                <p className="mt-4 text-sm leading-7 text-black/60">{item.description}</p>
+                <h2 className="mt-6 text-2xl font-semibold text-slate-950">{item.title}</h2>
+                <p className="mt-4 text-sm leading-7 text-slate-600">{item.description}</p>
                 <a href="/services" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-accent">
                   Learn how
                   <ArrowRight size={16} />
@@ -131,33 +129,28 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-white py-16 sm:py-20">
-        <div className="pointer-events-none absolute inset-0 min-h-[620px]">
-          <img src={photos.sectionServices} alt="Background abstract design and optimization" className="h-full w-full object-cover opacity-100" />
-          <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-white/0 to-black/90" />
-        </div>
-
+      <section className="relative overflow-hidden bg-slate-950 py-16 sm:py-20">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(14,165,164,0.18),_transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(56,189,248,0.15),_transparent_30%)]" />
         <div className="relative mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
-            <div className="rounded-[32px] border border-white/70 bg-white/95 p-10 shadow-[0_20px_60px_rgba(15,23,42,0.08)] backdrop-blur-xl">
+            <div className="rounded-[32px] border border-white/10 bg-white/10 p-10 shadow-[0_20px_60px_rgba(15,23,42,0.12)] backdrop-blur-xl">
               <p className="text-[12px] font-bold uppercase tracking-[0.24em] text-accent">Core services</p>
-              <h2 className="mt-4 text-4xl font-semibold leading-tight text-black sm:text-5xl">
+              <h2 className="mt-4 text-4xl font-semibold leading-tight text-white sm:text-5xl">
                 Work that blends strong strategy with polished execution
               </h2>
-              <p className="mt-6 max-w-xl text-base leading-8 text-black/60">
+              <p className="mt-6 max-w-xl text-base leading-8 text-slate-200/85">
                 We deliver digital products that feel calm, credible, and easy to use — from early concept to launch and ongoing improvement.
               </p>
-
             </div>
 
             <div className="grid gap-5 sm:grid-cols-2">
               {serviceCards.map((card) => (
-                <article key={card.title} className="rounded-[26px] border border-black/10 bg-white p-6 shadow-[0_18px_45px_rgba(0,0,0,0.06)] transition hover:-translate-y-1">
-                  <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-accent-50 text-accent">
+                <article key={card.title} className="rounded-[26px] border border-white/10 bg-white/10 p-6 text-white shadow-[0_18px_45px_rgba(0,0,0,0.08)] transition hover:-translate-y-1 hover:bg-white/15">
+                  <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-accent-50 text-accent shadow-sm">
                     <card.icon size={24} />
                   </div>
-                  <h3 className="text-xl font-semibold text-black">{card.title}</h3>
-                  <p className="mt-4 text-sm leading-7 text-black/60">{card.description}</p>
+                  <h3 className="text-xl font-semibold text-white">{card.title}</h3>
+                  <p className="mt-4 text-sm leading-7 text-slate-200/85">{card.description}</p>
                   <a href="/services" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-accent">
                     Explore
                     <ArrowRight size={16} />

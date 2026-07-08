@@ -1,5 +1,5 @@
 import React from 'react'
-import { BarChart3, Code2, Layers, MonitorSmartphone, Palette, RefreshCw, Shield, Smartphone, TrendingUp } from 'lucide-react'
+import { ArrowRight, BarChart3, Code2, Layers, MonitorSmartphone, Palette, RefreshCw, Shield, Smartphone, TrendingUp } from 'lucide-react'
 import { Hero } from '../components/Hero'
 import { ServiceCard } from '../components/ServiceCard'
 import { MainLayout } from '../layouts'
@@ -153,12 +153,38 @@ export const ServicesPage: React.FC = () => {
         backgroundImage={photos.sectionServices}
       />
 
-      <section className="bg-white py-16">
+      <section className="bg-slate-950 py-14">
+        <div className="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-12">
+          <div className="grid gap-4 sm:grid-cols-3">
+            {[
+              {
+                title: 'Focused outcomes',
+                description: 'We build digital products that move faster, feel premium, and perform with confidence.',
+              },
+              {
+                title: 'Clear process',
+                description: 'From strategy to launch, every step is organized around measurable business value.',
+              },
+              {
+                title: 'Teal-first polish',
+                description: 'Consistent visual systems, contrast, and motion that make your brand feel modern.',
+              },
+            ].map(item => (
+              <div key={item.title} className="rounded-[28px] border border-white/10 bg-white/5 p-6 text-white shadow-[0_18px_45px_rgba(14,165,164,0.18)]">
+                <h3 className="text-lg font-semibold text-white">{item.title}</h3>
+                <p className="mt-3 text-sm leading-7 text-slate-200/85">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-slate-50 py-16">
         <div className="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-12">
           <div className="mb-10">
             <p className="text-[12px] font-bold uppercase tracking-[0.18em] text-accent">Web</p>
-            <h2 className="mt-3 text-3xl font-extrabold tracking-[-0.02em] text-black sm:text-4xl">Websites & web applications</h2>
-            <p className="mt-4 max-w-3xl text-base leading-8 text-black/62">
+            <h2 className="mt-3 text-3xl font-extrabold tracking-[-0.02em] text-slate-950 sm:text-4xl">Websites & web applications</h2>
+            <p className="mt-4 max-w-3xl text-base leading-8 text-slate-600">
               From polished marketing sites to custom web platforms, we build digital products that are fast, dependable, and easier for customers to use.
             </p>
           </div>
@@ -178,12 +204,12 @@ export const ServicesPage: React.FC = () => {
         </div>
       </section>
 
-      <section className="border-y border-black/10 bg-white py-16">
+      <section className="border-y border-white/10 bg-slate-950 py-16">
         <div className="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-12">
           <div className="mb-10">
             <p className="text-[12px] font-bold uppercase tracking-[0.18em] text-accent">Mobile</p>
-            <h2 className="mt-3 text-3xl font-extrabold tracking-[-0.02em] text-black sm:text-4xl">Mobile app development</h2>
-            <p className="mt-4 max-w-3xl text-base leading-8 text-black/62">
+            <h2 className="mt-3 text-3xl font-extrabold tracking-[-0.02em] text-white sm:text-4xl">Mobile app development</h2>
+            <p className="mt-4 max-w-3xl text-base leading-8 text-slate-300">
               We design and build mobile experiences that feel intuitive, consistent, and ready for real users instead of just demos.
             </p>
           </div>
@@ -202,12 +228,12 @@ export const ServicesPage: React.FC = () => {
         </div>
       </section>
 
-      <section className="bg-white py-16">
+      <section className="bg-slate-50 py-16">
         <div className="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-12">
           <div className="mb-10">
             <p className="text-[12px] font-bold uppercase tracking-[0.18em] text-accent">Design</p>
-            <h2 className="mt-3 text-3xl font-extrabold tracking-[-0.02em] text-black sm:text-4xl">UI/UX design & optimization</h2>
-            <p className="mt-4 max-w-3xl text-base leading-8 text-black/62">
+            <h2 className="mt-3 text-3xl font-extrabold tracking-[-0.02em] text-slate-950 sm:text-4xl">UI/UX design & optimization</h2>
+            <p className="mt-4 max-w-3xl text-base leading-8 text-slate-600">
               Better design is not just visual. We improve clarity, speed, hierarchy, and user flow so the entire experience feels more welcoming.
             </p>
           </div>
@@ -245,15 +271,21 @@ export const ServicesPage: React.FC = () => {
         </div>
       </section>
 
-      <section className="bg-black py-16">
-        <div className="mx-auto max-w-4xl px-5 text-center sm:px-8 lg:px-12">
-          <h2 className="text-3xl font-extrabold tracking-[-0.02em] text-white md:text-5xl">Let's build something people enjoy using</h2>
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-white/68">
-            Whether it is a web app, mobile app, faster website, or better UI/UX, we can shape it into something clearer and more compelling.
-          </p>
-          <a href="/contact" className="mt-8 inline-flex items-center gap-2 rounded-md bg-white px-6 py-3 text-sm font-bold text-black transition hover:bg-accent hover:text-white">
-            Get Started Today
-          </a>
+      <section className="bg-slate-950 py-16">
+        <div className="mx-auto max-w-[960px] px-5 text-center sm:px-8 lg:px-12">
+          <div className="rounded-[40px] border border-white/10 bg-gradient-to-br from-teal-600 to-cyan-600 p-10 text-white shadow-[0_40px_100px_rgba(14,165,164,0.25)]">
+            <p className="text-sm uppercase tracking-[0.28em] text-teal-100">Ready to partner?</p>
+            <h2 className="mt-4 text-4xl font-extrabold tracking-[-0.04em] sm:text-5xl">
+              Build a standout digital product together.
+            </h2>
+            <p className="mt-5 max-w-2xl mx-auto text-lg leading-8 text-teal-100/90">
+              We help brands move faster with polished websites, apps, and design systems that customers trust.
+            </p>
+            <a href="/contact" className="mt-8 inline-flex items-center gap-3 rounded-full bg-white px-7 py-3 text-sm font-bold text-slate-950 transition hover:bg-slate-100">
+              Start a New Project
+              <ArrowRight size={18} />
+            </a>
+          </div>
         </div>
       </section>
     </MainLayout>

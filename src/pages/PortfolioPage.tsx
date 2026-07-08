@@ -85,25 +85,25 @@ export const PortfolioPage: React.FC = () => {
         backgroundImage={imageUrls.portfolio.hero}
       />
 
-      <section className="bg-white py-16">
+      <section className="bg-slate-950 py-16">
         <div className="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-12">
           <div className="mb-10 flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
             <div>
-              <p className="text-[12px] font-bold uppercase tracking-[0.18em] text-accent">Portfolio</p>
-              <h2 className="mt-3 text-3xl font-extrabold tracking-[-0.02em] text-black sm:text-4xl">Selected digital work</h2>
-              <p className="mt-4 max-w-2xl text-base leading-8 text-black/62">
+              <p className="text-[12px] font-bold uppercase tracking-[0.24em] text-accent">Portfolio</p>
+              <h2 className="mt-3 text-4xl font-extrabold tracking-[-0.04em] text-white sm:text-5xl">Selected digital work</h2>
+              <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-300">
                 A focused sample of websites, tools, and design systems shaped for clarity and business value.
               </p>
             </div>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-3">
               {categories.map(category => (
                 <button
                   key={category}
                   onClick={() => setSelectedCategory(category === 'All' ? '' : category)}
-                  className={`rounded-md px-4 py-2.5 text-sm font-bold transition ${
+                  className={`rounded-full px-4 py-2.5 text-sm font-semibold transition ${
                     (!selectedCategory && category === 'All') || selectedCategory === category
-                      ? 'bg-black text-white'
-                      : 'border border-black/10 bg-white text-black/64 hover:border-accent hover:text-accent'
+                      ? 'bg-accent text-white shadow-sm'
+                      : 'border border-slate-200 bg-white text-slate-700 hover:border-accent hover:text-accent'
                   }`}
                 >
                   {category}
@@ -112,7 +112,7 @@ export const PortfolioPage: React.FC = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {filteredProjects.map(project => (
               <ProjectCard
                 key={project.id}
@@ -128,11 +128,11 @@ export const PortfolioPage: React.FC = () => {
           </div>
 
           {filteredProjects.length === 0 && (
-            <div className="rounded-lg border border-black/10 bg-white py-16 text-center">
-              <p className="mb-6 text-base font-semibold text-black/62">No projects found in this category</p>
+            <div className="rounded-[32px] border border-white/15 bg-slate-950 py-16 text-center shadow-[0_20px_50px_rgba(15,23,42,0.12)]">
+              <p className="mb-6 text-base font-semibold text-slate-600">No projects found in this category</p>
               <button
                 onClick={() => setSelectedCategory('')}
-                className="inline-flex items-center gap-2 rounded-md bg-black px-6 py-3 text-sm font-bold text-white transition hover:bg-accent"
+                className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white transition hover:bg-accent-600"
               >
                 <X size={18} />
                 Clear Filters
@@ -159,10 +159,10 @@ export const PortfolioPage: React.FC = () => {
           <h2 className="text-3xl font-extrabold leading-tight tracking-[-0.02em] text-white sm:text-5xl">
             Your project could be next.
           </h2>
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-white/68">
+          <p className="mx-auto mt-5 max-w-2xl text-teal-100 leading-8">
             Let's collaborate to create a portfolio-worthy project that delivers real business results.
           </p>
-          <a href="/contact" className="mt-8 inline-flex items-center gap-2 rounded-md bg-white px-6 py-3 text-sm font-bold text-black transition hover:bg-accent hover:text-white">
+          <a href="/contact" className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-bold text-slate-950 transition hover:bg-slate-100">
             Start a New Project
             <ArrowRight size={17} />
           </a>
