@@ -29,10 +29,10 @@
   :root {
     --color-bg: white;
     --color-text: #111111;
-    --color-accent: #0ea5a4; /* brand teal */
-    --color-accent-600: #0b7f7d;
-    --color-accent-50: #f0fdfa;
-    --color-nav-bg: rgba(14, 165, 164, 0.16);
+    --color-accent: #f97316; /* brand orange */
+    --color-accent-600: #ea580c;
+    --color-accent-50: #fff7ed;
+    --color-nav-bg: rgba(255, 255, 255, 0.95);
     --color-nav-text: #0f1720;
     --color-heading: #0b1220;
     --border-weak: rgba(0,0,0,0.08);
