@@ -84,20 +84,8 @@ export const ServicesPage: React.FC = () => {
         'Handoff-ready specs',
       ],
     },
-    {
-      icon: TrendingUp,
-      title: 'Product Growth Support',
-      description: 'Post-launch iteration focused on onboarding, retention, and measurable product improvements.',
-      image: photos.productGrowth,
-      features: [
-        'Behavior-based refinement',
-        'Feature prioritization',
-        'Performance monitoring',
-        'Funnel review',
-        'Experiment-ready screens',
-        'Continuous product tuning',
-      ],
-    },
+    
+
   ]
 
   const designServices = [
@@ -129,20 +117,7 @@ export const ServicesPage: React.FC = () => {
         'Conversion-oriented flow design',
       ],
     },
-    {
-      icon: Shield,
-      title: 'Design QA & Accessibility',
-      description: 'Polish and validation work that makes the final interface easier to use for more people.',
-      image: photos.accessibility,
-      features: [
-        'Readable contrast and type hierarchy',
-        'Keyboard and device-friendly patterns',
-        'Consistent states and behaviors',
-        'Responsive behavior checks',
-        'Accessibility-minded refinement',
-        'Launch readiness review',
-      ],
-    },
+  
   ]
 
   return (
@@ -156,27 +131,7 @@ export const ServicesPage: React.FC = () => {
 
       <section className="bg-slate-950 py-14">
         <div className="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-12">
-          <div className="grid gap-4 sm:grid-cols-3">
-            {[
-              {
-                title: 'Focused outcomes',
-                description: 'We build digital products that move faster, feel premium, and perform with confidence.',
-              },
-              {
-                title: 'Clear process',
-                description: 'From strategy to launch, every step is organized around measurable business value.',
-              },
-              {
-                title: 'Teal-first polish',
-                description: 'Consistent visual systems, contrast, and motion that make your brand feel modern.',
-              },
-            ].map(item => (
-              <div key={item.title} className="rounded-[28px] border border-white/10 bg-white/5 p-6 text-white shadow-[0_18px_45px_rgba(14,165,164,0.18)]">
-                <h3 className="text-lg font-semibold text-white">{item.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-slate-200/85">{item.description}</p>
-              </div>
-            ))}
-          </div>
+
         </div>
       </section>
 

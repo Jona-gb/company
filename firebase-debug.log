@@ -1,0 +1,65 @@
+[debug] [2026-07-24T18:52:15.716Z] ----------------------------------------------------------------------
+[debug] [2026-07-24T18:52:15.720Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\JOE\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2026-07-24T18:52:15.721Z] CLI Version:   15.24.0
+[debug] [2026-07-24T18:52:15.721Z] Platform:      win32
+[debug] [2026-07-24T18:52:15.721Z] Node Version:  v24.12.0
+[debug] [2026-07-24T18:52:15.721Z] Detected Agent: unknown
+[debug] [2026-07-24T18:52:15.721Z] Time:          Fri Jul 24 2026 10:52:15 GMT-0800 (GMT-08:00)
+[debug] [2026-07-24T18:52:15.721Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\JOE\Documents\COMPANY\STARTUP_WEB\agency-site
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[debug] [2026-07-24T19:03:46.246Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-07-24T19:03:46.246Z] > authorizing via signed-in user (jonathangbekli04@gmail.com)
+[debug] [2026-07-24T19:03:46.259Z] Checked if tokens are valid: true, expires at: 1784922701604
+[debug] [2026-07-24T19:03:46.259Z] Checked if tokens are valid: true, expires at: 1784922701604
+[debug] [2026-07-24T19:03:46.260Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2026-07-24T19:03:56.841Z] *** [apiv2] error from fetch(https://firebase.googleapis.com/v1beta1/projects?pageSize=100, {"headers":{},"method":"GET","signal":{}}): ConnectTimeoutError: Connect Timeout Error (attempted addresses: 172.217.119.4:443, 172.217.113.4:443, 172.217.114.4:443, 172.217.112.4:443, 172.217.118.4:443, 172.217.116.4:443, 172.217.117.4:443, 172.217.115.4:443, timeout: 10000ms)
+[debug] [2026-07-24T19:03:56.841Z] Failed to make request to https://firebase.googleapis.com/v1beta1/projects?pageSize=100
+[debug] [2026-07-24T19:04:01.861Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\JOE\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:296:49)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-07-24T19:04:49.837Z] ----------------------------------------------------------------------
+[debug] [2026-07-24T19:04:49.841Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\JOE\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2026-07-24T19:04:49.841Z] CLI Version:   15.24.0
+[debug] [2026-07-24T19:04:49.841Z] Platform:      win32
+[debug] [2026-07-24T19:04:49.841Z] Node Version:  v24.12.0
+[debug] [2026-07-24T19:04:49.842Z] Detected Agent: unknown
+[debug] [2026-07-24T19:04:49.842Z] Time:          Fri Jul 24 2026 11:04:49 GMT-0800 (GMT-08:00)
+[debug] [2026-07-24T19:04:49.842Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\JOE\Documents\COMPANY\STARTUP_WEB\agency-site
+
+[debug] [2026-07-24T19:05:33.882Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\JOE\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:296:49)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+[error] 
+[error] Error: An unexpected error has occurred.

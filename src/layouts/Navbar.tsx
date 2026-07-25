@@ -8,18 +8,18 @@ export const Navbar: React.FC = () => {
   const navLinks = [
     { label: 'Home', href: '/' },
     { label: 'Services', href: '/services' },
-    { label: 'Portfolio', href: '/portfolio' },
+   // { label: 'Portfolio', href: '/portfolio' },
     { label: 'Contact', href: '/contact' },
   ]
 
   return (
-    <nav className="sticky top-0 z-50 site-navbar bg-slate-950/95 shadow-[0_25px_60px_rgba(15,23,42,0.18)] backdrop-blur-xl">
+    <nav className="sticky top-0 z-50 site-navbar bg-white/95 shadow-[0_25px_60px_rgba(15,23,42,0.08)] backdrop-blur-xl">
       <div className="mx-auto flex h-[76px] max-w-[1240px] items-center justify-between px-5 sm:px-8 lg:px-12">
         <Link to="/" className="flex items-center gap-2.5">
           <img src="/assets/logo2.png" alt="Huzz Solutions Logo" className="h-9 w-auto" />
           <div className="leading-none">
-            <p className="text-[18px] font-extrabold tracking-[-0.02em] text-white">Huzz Solutions</p>
-            <p className="mt-1 text-[11px] font-semibold text-slate-300">Tech. Media. Growth.</p>
+            <p className="text-[18px] font-extrabold tracking-[-0.02em] text-slate-950">Huzz Solutions</p>
+            <p className="mt-1 text-[11px] font-semibold text-slate-600">Tech. Media. Growth.</p>
           </div>
         </Link>
 
@@ -31,8 +31,8 @@ export const Navbar: React.FC = () => {
               className={({ isActive }) =>
                 `relative py-7 text-sm font-bold transition ${
                   isActive
-                    ? 'text-white after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-accent'
-                    : 'text-slate-300 hover:text-white'
+                    ? 'text-slate-950 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-accent'
+                    : 'text-slate-600 hover:text-slate-950'
                 }`
               }
             >
@@ -50,7 +50,7 @@ export const Navbar: React.FC = () => {
 
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="flex h-11 w-11 items-center justify-center rounded-md border border-white/15 text-white transition hover:border-accent hover:text-accent md:hidden"
+          className="flex h-11 w-11 items-center justify-center rounded-md border border-slate-300/70 text-slate-950 transition hover:border-accent hover:text-accent md:hidden"
           aria-label="Toggle navigation"
         >
           {isOpen ? <X size={22} /> : <Menu size={22} />}
@@ -58,13 +58,13 @@ export const Navbar: React.FC = () => {
       </div>
 
       {isOpen && (
-        <div className="border-t border-white/10 bg-slate-950/95 px-5 pb-5 shadow-[0_22px_44px_rgba(0,0,0,0.18)] md:hidden">
+        <div className="border-t border-slate-200 bg-white/95 px-5 pb-5 shadow-[0_22px_44px_rgba(0,0,0,0.08)] md:hidden">
           <div className="mx-auto grid max-w-[1240px] gap-1 pt-4">
             {navLinks.map(link => (
               <Link
                 key={`${link.label}-${link.href}-mobile`}
                 to={link.href}
-                className="rounded-md px-3 py-3 text-sm font-bold text-slate-200 transition hover:bg-white/5 hover:text-white"
+                className="rounded-md px-3 py-3 text-sm font-bold text-slate-700 transition hover:bg-slate-50 hover:text-slate-950"
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}

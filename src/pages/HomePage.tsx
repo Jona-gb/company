@@ -33,7 +33,7 @@ const serviceCards = [
 const team = [
   { name: 'Eliezer Ahorlu', role: 'Web Application Lead', image: imageUrls.team.eliezer },
   { name: 'Jonathan Gbekli', role: 'Mobile Product Designer', image: imageUrls.team.jonathan },
-  { name: 'Godwin Homadzi', role: 'UX Optimization Specialist', image: imageUrls.team.godwin },
+  { name: 'Godwin Homadzi', role: 'UI/UX Specialist', image: imageUrls.team.godwin },
 ]
 
 export const HomePage: React.FC = () => {
@@ -72,20 +72,24 @@ export const HomePage: React.FC = () => {
                 Start a project
                 <ArrowRight size={18} />
               </a>
-              <a href="/portfolio" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/10 px-6 py-3 text-sm font-bold text-white transition hover:border-accent hover:bg-white/15">
-                See our work
+              <a href="/services" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/10 px-6 py-3 text-sm font-bold text-white transition hover:border-accent hover:bg-white/15">
+                Our Service
                 <ArrowRight size={18} />
               </a>
             </div>
 
           </div>
 
-          <div className="relative w-full h-[420px] sm:h-[500px] lg:h-[520px] overflow-hidden rounded-[32px] bg-black shadow-[0_28px_90px_rgba(0,0,0,0.22)]">
-            <div className="pointer-events-none absolute inset-0 rounded-[32px] bg-[radial-gradient(circle_at_center,_rgba(14,165,164,0.3),_rgba(14,165,164,0)_36%)] blur-3xl opacity-95" />
-            <div className="pointer-events-none absolute left-[-12%] top-[18%] hidden h-[260px] w-[260px] rounded-full bg-[radial-gradient(circle,_rgba(56,189,248,0.35),_transparent_68%)] blur-3xl opacity-100 lg:block" />
-            <div className="pointer-events-none absolute right-[-10%] bottom-[8%] hidden h-[180px] w-[180px] rounded-full bg-[radial-gradient(circle,_rgba(20,184,166,0.22),_transparent_70%)] blur-2xl opacity-95 lg:block" />
-            <img src={photos.collaboration} alt="Team collaborating on product design" className="relative h-full w-full object-cover brightness-100" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+          <div className="relative group w-full h-[420px] sm:h-[500px] lg:h-[520px] overflow-hidden rounded-[32px] bg-black shadow-[0_28px_90px_rgba(0,0,0,0.22)] transition-shadow duration-500 lg:group-hover:shadow-[0_40px_120px_rgba(14,165,164,0.16)]">
+            <div className="pointer-events-none absolute inset-0 rounded-[32px] bg-[radial-gradient(circle_at_center,_rgba(14,165,164,0.28),_rgba(14,165,164,0)_36%)] blur-3xl opacity-90 transform transition-all duration-500 lg:group-hover:blur-2xl lg:group-hover:opacity-100 lg:group-hover:scale-105" />
+            <div className="pointer-events-none absolute left-[-12%] top-[18%] hidden h-[260px] w-[260px] rounded-full bg-[radial-gradient(circle,_rgba(56,189,248,0.35),_transparent_68%)] blur-3xl opacity-90 transform transition-all duration-500 lg:block lg:group-hover:scale-110 lg:group-hover:opacity-100" />
+            <div className="pointer-events-none absolute right-[-10%] bottom-[8%] hidden h-[180px] w-[180px] rounded-full bg-[radial-gradient(circle,_rgba(20,184,166,0.22),_transparent_70%)] blur-2xl opacity-90 transform transition-all duration-500 lg:block lg:group-hover:scale-105 lg:group-hover:opacity-100" />
+            <img
+              src={photos.collaboration}
+              alt="Team collaborating on product design"
+              className="relative h-full w-full object-cover brightness-100 transition-transform transition-shadow duration-500 lg:group-hover:scale-105 lg:group-hover:drop-shadow-[0_0_120px_rgba(14,165,164,0.6)] lg:group-hover:shadow-[0_0_150px_rgba(14,165,164,0.25)]"
+            />
+            <div className="" />
             <div className="relative flex h-full items-end p-8">
               <div className="rounded-3xl border border-white/15 bg-black/55 p-6 backdrop-blur-xl text-white shadow-[0_14px_40px_rgba(0,0,0,0.25)]">
                 <p className="text-sm uppercase tracking-[0.22em] text-teal-200">Feature launch support</p>

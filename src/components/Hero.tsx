@@ -19,8 +19,8 @@ export const Hero: React.FC<HeroProps> = ({
     <section className="relative overflow-hidden border-b border-black/10 bg-white">
       {backgroundImage && (
         <div className="pointer-events-none absolute inset-0">
-          <img src={backgroundImage} alt="" className="h-full w-full object-cover brightness-[0.55] contrast-[0.95]" />
-          <div className="absolute inset-0 bg-slate-950/75 backdrop-blur-xl" />
+          <img src={backgroundImage} alt="" className="h-full w-full object-cover brightness-[1.55] contrast-[0.95]" />
+          <div className="absolute inset-0 bg-slate-950/75 backdrop-blur-sm" />
         </div>
       )}
       <div className="relative z-10 mx-auto max-w-[1240px] px-5 py-16 min-h-[420px] sm:px-8 lg:px-12 lg:py-20">
@@ -45,7 +45,7 @@ export const Hero: React.FC<HeroProps> = ({
                 Start
                 <ArrowRight size={16} />
               </Link>
-              <Link to="/portfolio" className="inline-flex items-center gap-2 rounded-md border border-black/10 px-4 py-3 text-sm font-bold text-black transition hover:border-black">
+              <Link to="#/portfolio" className="inline-flex items-center gap-2 rounded-md border border-black/10 px-4 py-3 text-sm font-bold text-black transition hover:border-black">
                 Work
               </Link>
             </div>
